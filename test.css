@@ -1,0 +1,39 @@
+/*img { 
+    height: 100vh; 
+}
+*/
+
+/* header{
+    width:100%;
+    margin:0;
+}*/
+
+body, html {
+    height: 100%;
+}
+
+.bg { 
+    /* The image used */
+    background-image: url("assets/photos/plants/john-mark-arnold-223717-unsplash.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+  font-family:futura;
+  /* font-size: 72px; */
+  text-transform:uppercase;
+  letter-spacing: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
