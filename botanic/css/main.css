@@ -1,0 +1,150 @@
+/* global + box model fix */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: futura pt, arial, sans-serif;
+}
+
+header {
+    height: 25%;
+    background: url(../images/plant3.jpg), no-repeat fixed;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    font-family: futura, arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 { 
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    float: left;
+    border-radius: 50%;
+    display: inline;
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+nav {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .9rem;
+    text-align: center;
+    background-color: darkseagreen;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+
+a {
+    color: white;
+    padding: 15px;
+    line-height: 2;
+}
+
+a:hover {
+    color: azure;
+}
+
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 60px 50px;
+  padding-bottom: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.content-wrap p {
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: darkgreen;
+    margin: 0;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/*media queries*/
+/*tablet and larger*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    header {
+    height: 300px;
+    background: url(../images/plant3.jpg), no-repeat fixed;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    padding: 80px;
+    font-family: futura, arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: white;
+}
+    h1 {
+    font-size: 4rem;
+}
+    img {
+    max-width: 300px;
+    height: auto;
+    float: left;
+    border-radius: 50%;
+    display: inline;
+    margin: 50px 75px 50px 0;
+}
+    nav {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: darkseagreen;
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+}
+    h2 { 
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+   .content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding:  50px;
+  padding-bottom: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.content-wrap p {
+    line-height: 2;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+    footer {
+        font-size: .8 rem;
+    }
+}
+    
