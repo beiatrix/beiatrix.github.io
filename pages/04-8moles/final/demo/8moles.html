@@ -1,0 +1,3955 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fancyBox - Fancy jQuery Lightbox Alternative | Demonstration</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="../lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="../lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="../source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="../source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="../source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="../source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="../source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="../source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+//1: 1-44
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'SUMMER 2011'
+					}, {
+						href : '2_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}, {
+						href : '4_b.jpg'
+					}, {
+						href : '5_b.jpg'
+					}, {
+						href : '6_b.jpg'
+					}, {
+						href : '7_b.jpg'
+					}, {
+						href : '8_b.jpg'
+					}, {
+						href : '9_b.jpg'
+					}, {
+						href : '10_b.jpg'
+					}, {
+						href : '11_b.jpg'
+					}, {
+						href : '12_b.jpg'
+					}, {
+						href : '13_b.jpg'
+					}, {
+						href : '14_b.jpg'
+					}, {
+						href : '15_b.jpg'
+					}, {
+						href : '16_b.jpg'
+					}, {
+						href : '17_b.jpg'
+					}, {
+						href : '18_b.jpg'
+					}, {
+						href : '19_b.jpg'
+					}, {
+						href : '20_b.jpg'
+					}, {
+						href : '21_b.jpg'
+					}, {
+						href : '22_b.jpg'
+					}, {
+						href : '23_b.jpg'
+					}, {
+						href : '24_b.jpg'
+					}, {
+						href : '25_b.jpg'
+					}, {
+						href : '26_b.jpg'
+					}, {
+						href : '27_b.jpg'
+					}, {
+						href : '28_b.jpg'
+					}, {
+						href : '29_b.jpg'
+					}, {
+						href : '30_b.jpg'
+					}, {
+						href : '31_b.jpg'
+					}, {
+						href : '32_b.jpg'
+					}, {
+						href : '33_b.jpg'
+					}, {
+						href : '34_b.jpg'
+					}, {
+						href : '35_b.jpg'
+					}, {
+						href : '36_b.jpg'
+					}, {
+						href : '37_b.jpg'
+					}, {
+						href : '38_b.jpg'
+					}, {
+						href : '39_b.jpg'
+					}, {
+						href : '40_b.jpg'
+					}, {
+						href : '41_b.jpg'
+					}, {
+						href : '42_b.jpg'
+					}, {
+						href : '43_b.jpg'
+					}, {
+						href : '44_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//2: 45-79
+			$("#fancybox-manual-d").click(function() {
+				$.fancybox.open([
+					{
+						href : '45_b.jpg',
+						title : 'FALL 2011 - SPRING 2012'
+					}, {
+						href : '46_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '47_b.jpg'
+					}, {
+						href : '48_b.jpg'
+					}, {
+						href : '49_b.jpg'
+					}, {
+						href : '50_b.jpg'
+					}, {
+						href : '51_b.jpg'
+					}, {
+						href : '52_b.jpg'
+					}, {
+						href : '53_b.jpg'
+					}, {
+						href : '54_b.jpg'
+					}, {
+						href : '55_b.jpg'
+					}, {
+						href : '56_b.jpg'
+					}, {
+						href : '57_b.jpg'
+					}, {
+						href : '58_b.jpg'
+					}, {
+						href : '59_b.jpg'
+					}, {
+						href : '60_b.jpg'
+					}, {
+						href : '61_b.jpg'
+					}, {
+						href : '62_b.jpg'
+					}, {
+						href : '63_b.jpg'
+					}, {
+						href : '64_b.jpg'
+					}, {
+						href : '65_b.jpg'
+					}, {
+						href : '66_b.jpg'
+					}, {
+						href : '67_b.jpg'
+					}, {
+						href : '68_b.jpg'
+					}, {
+						href : '69_b.jpg'
+					}, {
+						href : '70_b.jpg'
+					}, {
+						href : '71_b.jpg'
+					}, {
+						href : '72_b.jpg'
+					}, {
+						href : '73_b.jpg'
+					}, {
+						href : '74_b.jpg'
+					}, {
+						href : '75_b.jpg'
+					}, {
+						href : '76_b.jpg'
+					}, {
+						href : '77_b.jpg'
+					}, {
+						href : '78_b.jpg'
+					}, {
+						href : '79_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//3: 80-111
+			$("#fancybox-manual-e").click(function() {
+				$.fancybox.open([
+					{
+						href : '80_b.jpg',
+						title : 'SUMMER - FALL 2012'
+					}, {
+						href : '81_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '82_b.jpg'
+					}, {
+						href : '83_b.jpg'
+					}, {
+						href : '84_b.jpg'
+					}, {
+						href : '85_b.jpg'
+					}, {
+						href : '86_b.jpg'
+					}, {
+						href : '87_b.jpg'
+					}, {
+						href : '88_b.jpg'
+					}, {
+						href : '89_b.jpg'
+					}, {
+						href : '90_b.jpg'
+					}, {
+						href : '91_b.jpg'
+					}, {
+						href : '92_b.jpg'
+					}, {
+						href : '93_b.jpg'
+					}, {
+						href : '94_b.jpg'
+					}, {
+						href : '95_b.jpg'
+					}, {
+						href : '96_b.jpg'
+					}, {
+						href : '97_b.jpg'
+					}, {
+						href : '98_b.jpg'
+					}, {
+						href : '99_b.jpg'
+					}, {
+						href : '100_b.jpg'
+					}, {
+						href : '101_b.jpg'
+					}, {
+						href : '102_b.jpg'
+					}, {
+						href : '103_b.jpg'
+					}, {
+						href : '104_b.jpg'
+					}, {
+						href : '105_b.jpg'
+					}, {
+						href : '106_b.jpg'
+					}, {
+						href : '107_b.jpg'
+					}, {
+						href : '108_b.jpg'
+					}, {
+						href : '109_b.jpg'
+					}, {
+						href : '110_b.jpg'
+					}, {
+						href : '111_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+//4: 112-133
+			$("#fancybox-manual-f").click(function() {
+				$.fancybox.open([
+					{
+						href : '112_b.jpg',
+						title : 'FALL - WINTER 2012'
+					}, {
+						href : '113_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '114_b.jpg'
+					}, {
+						href : '115_b.jpg'
+					}, {
+						href : '116_b.jpg'
+					}, {
+						href : '117_b.jpg'
+					}, {
+						href : '118_b.jpg'
+					}, {
+						href : '119_b.jpg'
+					}, {
+						href : '120_b.jpg'
+					}, {
+						href : '121_b.jpg'
+					}, {
+						href : '122_b.jpg'
+					}, {
+						href : '123_b.jpg'
+					}, {
+						href : '124_b.jpg'
+					}, {
+						href : '125_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '127_b.jpg'
+					}, {
+						href : '128_b.jpg'
+					}, {
+						href : '129_b.jpg'
+					}, {
+						href : '130_b.jpg'
+					}, {
+						href : '131_b.jpg'
+					}, {
+						href : '132_b.jpg'
+					}, {
+						href : '133_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+//5: 134-165
+			$("#fancybox-manual-g").click(function() {
+				$.fancybox.open([
+					{
+						href : '134_b.jpg',
+						title : 'SUMMER - FALL 2013'
+					}, {
+						href : '135_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '136_b.jpg'
+					}, {
+						href : '137_b.jpg'
+					}, {
+						href : '138_b.jpg'
+					}, {
+						href : '139_b.jpg'
+					}, {
+						href : '140_b.jpg'
+					}, {
+						href : '141_b.jpg'
+					}, {
+						href : '142_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '144_b.jpg'
+					}, {
+						href : '145_b.jpg'
+					}, {
+						href : '146_b.jpg'
+					}, {
+						href : '147_b.jpg'
+					}, {
+						href : '148_b.jpg'
+					}, {
+						href : '149_b.jpg'
+					}, {
+						href : '150_b.jpg'
+					}, {
+						href : '151_b.jpg'
+					}, {
+						href : '152_b.jpg'
+					}, {
+						href : '153_b.jpg'
+					}, {
+						href : '154_b.jpg'
+					}, {
+						href : '155_b.jpg'
+					}, {
+						href : '156_b.jpg'
+					}, {
+						href : '157_b.jpg'
+					}, {
+						href : '158_b.jpg'
+					}, {
+						href : '159_b.jpg'
+					}, {
+						href : '160_b.jpg'
+					}, {
+						href : '161_b.jpg'
+					}, {
+						href : '162_b.jpg'
+					}, {
+						href : '163_b.jpg'
+					}, {
+						href : '164_b.jpg'
+					}, {
+						href : '165_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+//6: 166-210
+			$("#fancybox-manual-h").click(function() {
+				$.fancybox.open([
+					{
+						href : '166_b.jpg',
+						title : 'FALL - WINTER 2013'
+					}, {
+						href : '167_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '168_b.jpg'
+					}, {
+						href : '169_b.jpg'
+					}, {
+						href : '170_b.jpg'
+					}, {
+						href : '171_b.jpg'
+					}, {
+						href : '172_b.jpg'
+					}, {
+						href : '173_b.jpg'
+					}, {
+						href : '174_b.jpg'
+					}, {
+						href : '175_b.jpg'
+					}, {
+						href : '176_b.jpg'
+					}, {
+						href : '177_b.jpg'
+					}, {
+						href : '178_b.jpg'
+					}, {
+						href : '179_b.jpg'
+					}, {
+						href : '180_b.jpg'
+					}, {
+						href : '181_b.jpg'
+					}, {
+						href : '182_b.jpg'
+					}, {
+						href : '183_b.jpg'
+					}, {
+						href : '184_b.jpg'
+					}, {
+						href : '185_b.jpg'
+					}, {
+						href : '186_b.jpg'
+					}, {
+						href : '187_b.jpg'
+					}, {
+						href : '188_b.jpg'
+					}, {
+						href : '189_b.jpg'
+					}, {
+						href : '190_b.jpg'
+					}, {
+						href : '191_b.jpg'
+					}, {
+						href : '192_b.jpg'
+					}, {
+						href : '193_b.jpg'
+					}, {
+						href : '194_b.jpg'
+					}, {
+						href : '195_b.jpg'
+					}, {
+						href : '196_b.jpg'
+					}, {
+						href : '197_b.jpg'
+					}, {
+						href : '198_b.jpg'
+					}, {
+						href : '199_b.jpg'
+					}, {
+						href : '200_b.jpg'
+					}, {
+						href : '201_b.jpg'
+					}, {
+						href : '202_b.jpg'
+					}, {
+						href : '203_b.jpg'
+					}, {
+						href : '204_b.jpg'
+					}, {
+						href : '205_b.jpg'
+					}, {
+						href : '206_b.jpg'
+					}, {
+						href : '207_b.jpg'
+					}, {
+						href : '208_b.jpg'
+					}, {
+						href : '209_b.jpg'
+					}, {
+						href : '210_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+//7: 211-285
+			$("#fancybox-manual-i").click(function() {
+				$.fancybox.open([
+					{
+						href : '211_b.jpg',
+						title : 'WINTER 2014'
+					}, {
+						href : '212_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '213_b.jpg'
+					}, {
+						href : '214_b.jpg'
+					}, {
+						href : '215_b.jpg'
+					}, {
+						href : '216_b.jpg'
+					}, {
+						href : '217_b.jpg'
+					}, {
+						href : '218_b.jpg'
+					}, {
+						href : '219_b.jpg'
+					}, {
+						href : '220_b.jpg'
+					}, {
+						href : '221_b.jpg'
+					}, {
+						href : '222_b.jpg'
+					}, {
+						href : '223_b.jpg'
+					}, {
+						href : '224_b.jpg'
+					}, {
+						href : '225_b.jpg'
+					}, {
+						href : '226_b.jpg'
+					}, {
+						href : '227_b.jpg'
+					}, {
+						href : '228_b.jpg'
+					}, {
+						href : '229_b.jpg'
+					}, {
+						href : '230_b.jpg'
+					}, {
+						href : '231_b.jpg'
+					}, {
+						href : '232_b.jpg'
+					}, {
+						href : '233_b.jpg'
+					}, {
+						href : '234_b.jpg'
+					}, {
+						href : '235_b.jpg'
+					}, {
+						href : '236_b.jpg'
+					}, {
+						href : '237_b.jpg'
+					}, {
+						href : '238_b.jpg'
+					}, {
+						href : '239_b.jpg'
+					}, {
+						href : '240_b.jpg'
+					}, {
+						href : '241_b.jpg'
+					}, {
+						href : '242_b.jpg'
+					}, {
+						href : '243_b.jpg'
+					}, {
+						href : '244_b.jpg'
+					}, {
+						href : '245_b.jpg'
+					}, {
+						href : '246_b.jpg'
+					}, {
+						href : '247_b.jpg'
+					}, {
+						href : '248_b.jpg'
+					}, {
+						href : '249_b.jpg'
+					}, {
+						href : '250_b.jpg'
+					}, {
+						href : '251_b.jpg'
+					}, {
+						href : '252_b.jpg'
+					}, {
+						href : '253_b.jpg'
+					}, {
+						href : '254_b.jpg'
+					}, {
+						href : '255_b.jpg'
+					}, {
+						href : '256_b.jpg'
+					}, {
+						href : '257_b.jpg'
+					}, {
+						href : '258_b.jpg'
+					}, {
+						href : '259_b.jpg'
+					}, {
+						href : '260_b.jpg'
+					}, {
+						href : '261_b.jpg'
+					}, {
+						href : '262_b.jpg'
+					}, {
+						href : '263_b.jpg'
+					}, {
+						href : '264_b.jpg'
+					}, {
+						href : '265_b.jpg'
+					}, {
+						href : '266_b.jpg'
+					}, {
+						href : '267_b.jpg'
+					}, {
+						href : '268_b.jpg'
+					}, {
+						href : '269_b.jpg'
+					}, {
+						href : '270_b.jpg'
+					}, {
+						href : '271_b.jpg'
+					}, {
+						href : '272_b.jpg'
+					}, {
+						href : '273_b.jpg'
+					}, {
+						href : '274_b.jpg'
+					}, {
+						href : '275_b.jpg'
+					}, {
+						href : '276_b.jpg'
+					}, {
+						href : '277_b.jpg'
+					}, {
+						href : '278_b.jpg'
+					}, {
+						href : '279_b.jpg'
+					}, {
+						href : '280_b.jpg'
+					}, {
+						href : '281_b.jpg'
+					}, {
+						href : '282_b.jpg'
+					}, {
+						href : '283_b.jpg'
+					}, {
+						href : '284_b.jpg'
+					}, {
+						href : '285_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//8: 286-311
+			$("#fancybox-manual-j").click(function() {
+				$.fancybox.open([
+					{
+						href : '286_b.jpg',
+						title : 'SUMMER - FALL 2014'
+					}, {
+						href : '287_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '288_b.jpg'
+					}, {
+						href : '289_b.jpg'
+					}, {
+						href : '290_b.jpg'
+					}, {
+						href : '291_b.jpg'
+					}, {
+						href : '292_b.jpg'
+					}, {
+						href : '293_b.jpg'
+					}, {
+						href : '294_b.jpg'
+					}, {
+						href : '295_b.jpg'
+					}, {
+						href : '296_b.jpg'
+					}, {
+						href : '297_b.jpg'
+					}, {
+						href : '298_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}, {
+						href : '301_b.jpg'
+					}, {
+						href : '302_b.jpg'
+					}, {
+						href : '303_b.jpg'
+					}, {
+						href : '304_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}, {
+						href : '306_b.jpg'
+					}, {
+						href : '307_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}, {
+						href : '309_b.jpg'
+					}, {
+						href : '310_b.jpg'
+					}, {
+						href : '311_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//2011: 1-61
+			$("#fancybox-manual-k").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : '2011'
+					}, {
+						href : '2_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}, {
+						href : '4_b.jpg'
+					}, {
+						href : '5_b.jpg'
+					}, {
+						href : '6_b.jpg'
+					}, {
+						href : '7_b.jpg'
+					}, {
+						href : '8_b.jpg'
+					}, {
+						href : '9_b.jpg'
+					}, {
+						href : '10_b.jpg'
+					}, {
+						href : '11_b.jpg'
+					}, {
+						href : '12_b.jpg'
+					}, {
+						href : '13_b.jpg'
+					}, {
+						href : '14_b.jpg'
+					}, {
+						href : '15_b.jpg'
+					}, {
+						href : '16_b.jpg'
+					}, {
+						href : '17_b.jpg'
+					}, {
+						href : '18_b.jpg'
+					}, {
+						href : '19_b.jpg'
+					}, {
+						href : '20_b.jpg'
+					}, {
+						href : '21_b.jpg'
+					}, {
+						href : '22_b.jpg'
+					}, {
+						href : '23_b.jpg'
+					}, {
+						href : '24_b.jpg'
+					}, {
+						href : '25_b.jpg'
+					}, {
+						href : '26_b.jpg'
+					}, {
+						href : '27_b.jpg'
+					}, {
+						href : '28_b.jpg'
+					}, {
+						href : '29_b.jpg'
+					}, {
+						href : '30_b.jpg'
+					}, {
+						href : '31_b.jpg'
+					}, {
+						href : '32_b.jpg'
+					}, {
+						href : '33_b.jpg'
+					}, {
+						href : '34_b.jpg'
+					}, {
+						href : '35_b.jpg'
+					}, {
+						href : '36_b.jpg'
+					}, {
+						href : '37_b.jpg'
+					}, {
+						href : '38_b.jpg'
+					}, {
+						href : '39_b.jpg'
+					}, {
+						href : '40_b.jpg'
+					}, {
+						href : '41_b.jpg'
+					}, {
+						href : '42_b.jpg'
+					}, {
+						href : '43_b.jpg'
+					}, {
+						href : '44_b.jpg'
+					}, {
+						href : '45_b.jpg'
+					}, {
+						href : '46_b.jpg'
+					}, {
+						href : '47_b.jpg'
+					}, {
+						href : '48_b.jpg'
+					}, {
+						href : '49_b.jpg'
+					}, {
+						href : '50_b.jpg'
+					}, {
+						href : '51_b.jpg'
+					}, {
+						href : '52_b.jpg'
+					}, {
+						href : '53_b.jpg'
+					}, {
+						href : '54_b.jpg'
+					}, {
+						href : '55_b.jpg'
+					}, {
+						href : '56_b.jpg'
+					}, {
+						href : '57_b.jpg'
+					}, {
+						href : '58_b.jpg'
+					}, {
+						href : '59_b.jpg'
+					}, {
+						href : '60_b.jpg'
+					}, {
+						href : '61_b.jpg'
+					}					
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//2012: 62-133
+			$("#fancybox-manual-l").click(function() {
+				$.fancybox.open([
+					{
+						href : '62_b.jpg',
+						title : '2012'
+					}, {
+						href : '63_b.jpg'
+					}, {
+						href : '64_b.jpg'
+					}, {
+						href : '65_b.jpg'
+					}, {
+						href : '66_b.jpg'
+					}, {
+						href : '67_b.jpg'
+					}, {
+						href : '68_b.jpg'
+					}, {
+						href : '69_b.jpg'
+					}, {
+						href : '70_b.jpg'
+					}, {
+						href : '71_b.jpg'
+					}, {
+						href : '72_b.jpg'
+					}, {
+						href : '73_b.jpg'
+					}, {
+						href : '74_b.jpg'
+					}, {
+						href : '75_b.jpg'
+					}, {
+						href : '76_b.jpg'
+					}, {
+						href : '77_b.jpg'
+					}, {
+						href : '78_b.jpg'
+					}, {
+						href : '79_b.jpg'
+					}, {
+						href : '80_b.jpg'
+					}, {
+						href : '81_b.jpg'
+					}, {
+						href : '82_b.jpg'
+					}, {
+						href : '83_b.jpg'
+					}, {
+						href : '84_b.jpg'
+					}, {
+						href : '85_b.jpg'
+					}, {
+						href : '86_b.jpg'
+					}, {
+						href : '87_b.jpg'
+					}, {
+						href : '88_b.jpg'
+					}, {
+						href : '89_b.jpg'
+					}, {
+						href : '90_b.jpg'
+					}, {
+						href : '91_b.jpg'
+					}, {
+						href : '92_b.jpg'
+					}, {
+						href : '93_b.jpg'
+					}, {
+						href : '94_b.jpg'
+					}, {
+						href : '95_b.jpg'
+					}, {
+						href : '96_b.jpg'
+					}, {
+						href : '97_b.jpg'
+					}, {
+						href : '98_b.jpg'
+					}, {
+						href : '99_b.jpg'
+					}, {
+						href : '100_b.jpg'
+					}, {
+						href : '101_b.jpg'
+					}, {
+						href : '102_b.jpg'
+					}, {
+						href : '103_b.jpg'
+					}, {
+						href : '104_b.jpg'
+					}, {
+						href : '105_b.jpg'
+					}, {
+						href : '106_b.jpg'
+					}, {
+						href : '107_b.jpg'
+					}, {
+						href : '108_b.jpg'
+					}, {
+						href : '109_b.jpg'
+					}, {
+						href : '110_b.jpg'
+					}, {
+						href : '111_b.jpg'
+					}, {
+						href : '112_b.jpg'
+					}, {
+						href : '113_b.jpg'
+					}, {
+						href : '114_b.jpg'
+					}, {
+						href : '115_b.jpg'
+					}, {
+						href : '116_b.jpg'
+					}, {
+						href : '117_b.jpg'
+					}, {
+						href : '118_b.jpg'
+					}, {
+						href : '119_b.jpg'
+					}, {
+						href : '120_b.jpg'
+					}, {
+						href : '121_b.jpg'
+					}, {
+						href : '122_b.jpg'
+					}, {
+						href : '123_b.jpg'
+					}, {
+						href : '124_b.jpg'
+					}, {
+						href : '125_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '127_b.jpg'
+					}, {
+						href : '128_b.jpg'
+					}, {
+						href : '129_b.jpg'
+					}, {
+						href : '130_b.jpg'
+					}, {
+						href : '131_b.jpg'
+					}, {
+						href : '132_b.jpg'
+					}, {
+						href : '133_b.jpg'
+					}	
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//2013: 134-210
+			$("#fancybox-manual-m").click(function() {
+				$.fancybox.open([
+					{
+						href : '134_b.jpg',
+						title : '2013'
+					}, {
+						href : '135_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '136_b.jpg'
+					}, {
+						href : '137_b.jpg'
+					}, {
+						href : '138_b.jpg'
+					}, {
+						href : '139_b.jpg'
+					}, {
+						href : '140_b.jpg'
+					}, {
+						href : '141_b.jpg'
+					}, {
+						href : '142_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '144_b.jpg'
+					}, {
+						href : '145_b.jpg'
+					}, {
+						href : '146_b.jpg'
+					}, {
+						href : '147_b.jpg'
+					}, {
+						href : '148_b.jpg'
+					}, {
+						href : '149_b.jpg'
+					}, {
+						href : '150_b.jpg'
+					}, {
+						href : '151_b.jpg'
+					}, {
+						href : '152_b.jpg'
+					}, {
+						href : '153_b.jpg'
+					}, {
+						href : '154_b.jpg'
+					}, {
+						href : '155_b.jpg'
+					}, {
+						href : '156_b.jpg'
+					}, {
+						href : '157_b.jpg'
+					}, {
+						href : '158_b.jpg'
+					}, {
+						href : '159_b.jpg'
+					}, {
+						href : '160_b.jpg'
+					}, {
+						href : '161_b.jpg'
+					}, {
+						href : '162_b.jpg'
+					}, {
+						href : '163_b.jpg'
+					}, {
+						href : '164_b.jpg'
+					}, {
+						href : '165_b.jpg'
+					}, {
+						href : '166_b.jpg'
+					}, {
+						href : '167_b.jpg'
+					}, {
+						href : '168_b.jpg'
+					}, {
+						href : '169_b.jpg'
+					}, {
+						href : '170_b.jpg'
+					}, {
+						href : '171_b.jpg'
+					}, {
+						href : '172_b.jpg'
+					}, {
+						href : '173_b.jpg'
+					}, {
+						href : '174_b.jpg'
+					}, {
+						href : '175_b.jpg'
+					}, {
+						href : '176_b.jpg'
+					}, {
+						href : '177_b.jpg'
+					}, {
+						href : '178_b.jpg'
+					}, {
+						href : '179_b.jpg'
+					}, {
+						href : '180_b.jpg'
+					}, {
+						href : '181_b.jpg'
+					}, {
+						href : '182_b.jpg'
+					}, {
+						href : '183_b.jpg'
+					}, {
+						href : '184_b.jpg'
+					}, {
+						href : '185_b.jpg'
+					}, {
+						href : '186_b.jpg'
+					}, {
+						href : '187_b.jpg'
+					}, {
+						href : '188_b.jpg'
+					}, {
+						href : '189_b.jpg'
+					}, {
+						href : '190_b.jpg'
+					}, {
+						href : '191_b.jpg'
+					}, {
+						href : '192_b.jpg'
+					}, {
+						href : '193_b.jpg'
+					}, {
+						href : '194_b.jpg'
+					}, {
+						href : '195_b.jpg'
+					}, {
+						href : '196_b.jpg'
+					}, {
+						href : '197_b.jpg'
+					}, {
+						href : '198_b.jpg'
+					}, {
+						href : '199_b.jpg'
+					}, {
+						href : '200_b.jpg'
+					}, {
+						href : '201_b.jpg'
+					}, {
+						href : '202_b.jpg'
+					}, {
+						href : '203_b.jpg'
+					}, {
+						href : '204_b.jpg'
+					}, {
+						href : '205_b.jpg'
+					}, {
+						href : '206_b.jpg'
+					}, {
+						href : '207_b.jpg'
+					}, {
+						href : '208_b.jpg'
+					}, {
+						href : '209_b.jpg'
+					}, {
+						href : '210_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+//2014: 211-311
+			$("#fancybox-manual-n").click(function() {
+				$.fancybox.open([
+					{
+						href : '211_b.jpg',
+						title : '2014'
+					}, {
+						href : '212_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '213_b.jpg'
+					}, {
+						href : '214_b.jpg'
+					}, {
+						href : '215_b.jpg'
+					}, {
+						href : '216_b.jpg'
+					}, {
+						href : '217_b.jpg'
+					}, {
+						href : '218_b.jpg'
+					}, {
+						href : '219_b.jpg'
+					}, {
+						href : '220_b.jpg'
+					}, {
+						href : '221_b.jpg'
+					}, {
+						href : '222_b.jpg'
+					}, {
+						href : '223_b.jpg'
+					}, {
+						href : '224_b.jpg'
+					}, {
+						href : '225_b.jpg'
+					}, {
+						href : '226_b.jpg'
+					}, {
+						href : '227_b.jpg'
+					}, {
+						href : '228_b.jpg'
+					}, {
+						href : '229_b.jpg'
+					}, {
+						href : '230_b.jpg'
+					}, {
+						href : '231_b.jpg'
+					}, {
+						href : '232_b.jpg'
+					}, {
+						href : '233_b.jpg'
+					}, {
+						href : '234_b.jpg'
+					}, {
+						href : '235_b.jpg'
+					}, {
+						href : '236_b.jpg'
+					}, {
+						href : '237_b.jpg'
+					}, {
+						href : '238_b.jpg'
+					}, {
+						href : '239_b.jpg'
+					}, {
+						href : '240_b.jpg'
+					}, {
+						href : '241_b.jpg'
+					}, {
+						href : '242_b.jpg'
+					}, {
+						href : '243_b.jpg'
+					}, {
+						href : '244_b.jpg'
+					}, {
+						href : '245_b.jpg'
+					}, {
+						href : '246_b.jpg'
+					}, {
+						href : '247_b.jpg'
+					}, {
+						href : '248_b.jpg'
+					}, {
+						href : '249_b.jpg'
+					}, {
+						href : '250_b.jpg'
+					}, {
+						href : '251_b.jpg'
+					}, {
+						href : '252_b.jpg'
+					}, {
+						href : '253_b.jpg'
+					}, {
+						href : '254_b.jpg'
+					}, {
+						href : '255_b.jpg'
+					}, {
+						href : '256_b.jpg'
+					}, {
+						href : '257_b.jpg'
+					}, {
+						href : '258_b.jpg'
+					}, {
+						href : '259_b.jpg'
+					}, {
+						href : '260_b.jpg'
+					}, {
+						href : '261_b.jpg'
+					}, {
+						href : '262_b.jpg'
+					}, {
+						href : '263_b.jpg'
+					}, {
+						href : '264_b.jpg'
+					}, {
+						href : '265_b.jpg'
+					}, {
+						href : '266_b.jpg'
+					}, {
+						href : '267_b.jpg'
+					}, {
+						href : '268_b.jpg'
+					}, {
+						href : '269_b.jpg'
+					}, {
+						href : '270_b.jpg'
+					}, {
+						href : '271_b.jpg'
+					}, {
+						href : '272_b.jpg'
+					}, {
+						href : '273_b.jpg'
+					}, {
+						href : '274_b.jpg'
+					}, {
+						href : '275_b.jpg'
+					}, {
+						href : '276_b.jpg'
+					}, {
+						href : '277_b.jpg'
+					}, {
+						href : '278_b.jpg'
+					}, {
+						href : '279_b.jpg'
+					}, {
+						href : '280_b.jpg'
+					}, {
+						href : '281_b.jpg'
+					}, {
+						href : '282_b.jpg'
+					}, {
+						href : '283_b.jpg'
+					}, {
+						href : '284_b.jpg'
+					}, {
+						href : '285_b.jpg'
+					}, {
+						href : '286_b.jpg'
+					}, {
+						href : '287_b.jpg'
+					}, {
+						href : '288_b.jpg'
+					}, {
+						href : '289_b.jpg'
+					}, {
+						href : '290_b.jpg'
+					}, {
+						href : '291_b.jpg'
+					}, {
+						href : '292_b.jpg'
+					}, {
+						href : '293_b.jpg'
+					}, {
+						href : '294_b.jpg'
+					}, {
+						href : '295_b.jpg'
+					}, {
+						href : '296_b.jpg'
+					}, {
+						href : '297_b.jpg'
+					}, {
+						href : '298_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}, {
+						href : '301_b.jpg'
+					}, {
+						href : '302_b.jpg'
+					}, {
+						href : '303_b.jpg'
+					}, {
+						href : '304_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}, {
+						href : '306_b.jpg'
+					}, {
+						href : '307_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}, {
+						href : '309_b.jpg'
+					}, {
+						href : '310_b.jpg'
+					}, {
+						href : '311_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});			
+
+
+//selfie
+			$("#fancybox-manual-selfie").click(function() {
+				$.fancybox.open([
+					{
+						href : '22_b.jpg',
+						title : '#selfie'
+					}, {
+						href : '50_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '51_b.jpg'
+					}, {
+						href : '52_b.jpg'
+					}, {
+						href : '53_b.jpg'
+					}, {
+						href : '109_b.jpg'
+					}, {
+						href : '112_b.jpg'
+					}, {
+						href : '117_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '133_b.jpg'
+					}, {
+						href : '161_b.jpg'
+					}, {
+						href : '214_b.jpg'
+					}, {
+						href : '217_b.jpg'
+					}, {
+						href : '218_b.jpg'
+					}, {
+						href : '221_b.jpg'
+					}, {
+						href : '223_b.jpg'
+					}, {
+						href : '225_b.jpg'
+					}, {
+						href : '226_b.jpg'
+					}, {
+						href : '227_b.jpg'
+					}, {
+						href : '230_b.jpg'
+					}, {
+						href : '233_b.jpg'
+					}, {
+						href : '234_b.jpg'
+					}, {
+						href : '237_b.jpg'
+					}, {
+						href : '241_b.jpg'
+					}, {
+						href : '242_b.jpg'
+					}, {
+						href : '243_b.jpg'
+					}, {
+						href : '244_b.jpg'
+					}, {
+						href : '247_b.jpg'
+					}, {
+						href : '248_b.jpg'
+					}, {
+						href : '250_b.jpg'
+					}, {
+						href : '252_b.jpg'
+					}, {
+						href : '254_b.jpg'
+					}, {
+						href : '257_b.jpg'
+					}, {
+						href : '258_b.jpg'
+					}, {
+						href : '262_b.jpg'
+					}, {
+						href : '263_b.jpg'
+					}, {
+						href : '269_b.jpg'
+					}, {
+						href : '270_b.jpg'
+					}, {
+						href : '278_b.jpg'
+					}, {
+						href : '279_b.jpg'
+					}, {
+						href : '282_b.jpg'
+					}, {
+						href : '283_b.jpg'
+					}, {
+						href : '287_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+			
+//adventure time
+			$("#fancybox-manual-at").click(function() {
+				$.fancybox.open([
+					{
+						href : '23_b.jpg',
+						title : '#adventure time'
+					}, {
+						href : '25_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '30_b.jpg'
+					}, {
+						href : '31_b.jpg'
+					}, {
+						href : '40_b.jpg'
+					}, {
+						href : '42_b.jpg'
+					}, {
+						href : '77_b.jpg'
+					}, {
+						href : '78_b.jpg'
+					}, {
+						href : '81_b.jpg'
+					}, {
+						href : '101_b.jpg'
+					}, {
+						href : '116_b.jpg'
+					}, {
+						href : '118_b.jpg'
+					}, {
+						href : '275_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+			
+//dan
+			$("#fancybox-manual-dan").click(function() {
+				$.fancybox.open([
+					{
+						href : '286_b.jpg',
+						title : '#danisnotonfire'
+					}, {
+						href : '287_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '298_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}, {
+						href : '301_b.jpg'
+					}, {
+						href : '304_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//futurama
+			$("#fancybox-manual-futurama").click(function() {
+				$.fancybox.open([
+					{
+						href : '26_b.jpg',
+						title : '#futurama'
+					}, {
+						href : '28_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '29_b.jpg'
+					}, {
+						href : '62_b.jpg'
+					}, {
+						href : '84_b.jpg'
+					}, {
+						href : '94_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});			
+
+//amazingphil
+			$("#fancybox-manual-phil").click(function() {
+				$.fancybox.open([
+					{
+						href : '287_b.jpg',
+						title : '#amazingphil'
+					}, {
+						href : '297_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});		
+
+//doctor who
+			$("#fancybox-manual-dw").click(function() {
+				$.fancybox.open([
+					{
+						href : '136_b.jpg',
+						title : '#doctor who'
+					}, {
+						href : '137_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '147_b.jpg'
+					}, {
+						href : '148_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});					
+			
+
+//young justice
+			$("#fancybox-manual-yj").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : '#young justice'
+					}, {
+						href : '4_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '6_b.jpg'
+					}, {
+						href : '8_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});							
+							
+
+//new york
+			$("#fancybox-manual-ny").click(function() {
+				$.fancybox.open([
+					{
+						href : '142_b.jpg',
+						title : '#new york'
+					}, {
+						href : '143_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '144_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});			
+
+//star wars
+			$("#fancybox-manual-sw").click(function() {
+				$.fancybox.open([
+					{
+						href : '86_b.jpg',
+						title : '#star wars'
+					}, {
+						href : '88_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '89_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});							
+
+//people
+			$("#fancybox-manual-people").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : '#people'
+					}, {
+						href : '3_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '5_b.jpg'
+					}, {
+						href : '9_b.jpg'
+					}, {
+						href : '10_b.jpg'
+					}, {
+						href : '11_b.jpg'
+					}, {
+						href : '14_b.jpg'
+					}, {
+						href : '15_b.jpg'
+					}, {
+						href : '19_b.jpg'
+					}, {
+						href : '20_b.jpg'
+					}, {
+						href : '21_b.jpg'
+					}, {
+						href : '41_b.jpg'
+					}, {
+						href : '42_b.jpg'
+					}, {
+						href : '46_b.jpg'
+					}, {
+						href : '49_b.jpg'
+					}, {
+						href : '50_b.jpg'
+					}, {
+						href : '51_b.jpg'
+					}, {
+						href : '71_b.jpg'
+					}, {
+						href : '74_b.jpg'
+					}, {
+						href : '75_b.jpg'
+					}, {
+						href : '76_b.jpg'
+					}, {
+						href : '86_b.jpg'
+					}, {
+						href : '89_b.jpg'
+					}, {
+						href : '91_b.jpg'
+					}, {
+						href : '96_b.jpg'
+					}, {
+						href : '112_b.jpg'
+					}, {
+						href : '113_b.jpg'
+					}, {
+						href : '114_b.jpg'
+					}, {
+						href : '117_b.jpg'
+					}, {
+						href : '119_b.jpg'
+					}, {
+						href : '120_b.jpg'
+					}, {
+						href : '121_b.jpg'
+					}, {
+						href : '122_b.jpg'
+					}, {
+						href : '123_b.jpg'
+					}, {
+						href : '124_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '129_b.jpg'
+					}, {
+						href : '135_b.jpg'
+					}, {
+						href : '136_b.jpg'
+					}, {
+						href : '137_b.jpg'
+					}, {
+						href : '140_b.jpg'
+					}, {
+						href : '145_b.jpg'
+					}, {
+						href : '146_b.jpg'
+					}, {
+						href : '147_b.jpg'
+					}, {
+						href : '148_b.jpg'
+					}, {
+						href : '149_b.jpg'
+					}, {
+						href : '153_b.jpg'
+					}, {
+						href : '156_b.jpg'
+					}, {
+						href : '195_b.jpg'
+					}, {
+						href : '196_b.jpg'
+					}, {
+						href : '199_b.jpg'
+					}, {
+						href : '214_b.jpg'
+					}, {
+						href : '216_b.jpg'
+					}, {
+						href : '220_b.jpg'
+					}, {
+						href : '231_b.jpg'
+					}, {
+						href : '232_b.jpg'
+					}, {
+						href : '246_b.jpg'
+					}, {
+						href : '258_b.jpg'
+					}, {
+						href : '265_b.jpg'
+					}, {
+						href : '273_b.jpg'
+					}, {
+						href : '276_b.jpg'
+					}, {
+						href : '277_b.jpg'
+					}, {
+						href : '290_b.jpg'
+					}, {
+						href : '292_b.jpg'
+					}, {
+						href : '295_b.jpg'
+					}, {
+						href : '296_b.jpg'
+					}, {
+						href : '297_b.jpg'
+					}, {
+						href : '298_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}, {
+						href : '301_b.jpg'
+					}, {
+						href : '302_b.jpg'
+					}, {
+						href : '303_b.jpg'
+					}, {
+						href : '304_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}, {
+						href : '306_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}, {
+						href : '309_b.jpg'
+					}, {
+						href : '310_b.jpg'
+					}, {
+						href : '311_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//comic
+			$("#fancybox-manual-comic").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : '#comic'
+					}, {
+						href : '2_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}, {
+						href : '5_b.jpg'
+					}, {
+						href : '7_b.jpg'
+					}, {
+						href : '14_b.jpg'
+					}, {
+						href : '20_b.jpg'
+					}, {
+						href : '21_b.jpg'
+					}, {
+						href : '22_b.jpg'
+					}, {
+						href : '24_b.jpg'
+					}, {
+						href : '54_b.jpg'
+					}, {
+						href : '55_b.jpg'
+					}, {
+						href : '56_b.jpg'
+					}, {
+						href : '57_b.jpg'
+					}, {
+						href : '59_b.jpg'
+					}, {
+						href : '60_b.jpg'
+					}, {
+						href : '61_b.jpg'
+					}, {
+						href : '64_b.jpg'
+					}, {
+						href : '73_b.jpg'
+					}, {
+						href : '81_b.jpg'
+					}, {
+						href : '82_b.jpg'
+					}, {
+						href : '83_b.jpg'
+					}, {
+						href : '84_b.jpg'
+					}, {
+						href : '85_b.jpg'
+					}, {
+						href : '86_b.jpg'
+					}, {
+						href : '87_b.jpg'
+					}, {
+						href : '89_b.jpg'
+					}, {
+						href : '90_b.jpg'
+					}, {
+						href : '91_b.jpg'
+					}, {
+						href : '92_b.jpg'
+					}, {
+						href : '93_b.jpg'
+					}, {
+						href : '94_b.jpg'
+					}, {
+						href : '95_b.jpg'
+					}, {
+						href : '96_b.jpg'
+					}, {
+						href : '97_b.jpg'
+					}, {
+						href : '98_b.jpg'
+					}, {
+						href : '103_b.jpg'
+					}, {
+						href : '161_b.jpg'
+					}, {
+						href : '171_b.jpg'
+					}, {
+						href : '198_b.jpg'
+					}, {
+						href : '208_b.jpg'
+					}, {
+						href : '211_b.jpg'
+					}, {
+						href : '217_b.jpg'
+					}, {
+						href : '218_b.jpg'
+					}, {
+						href : '219_b.jpg'
+					}, {
+						href : '222_b.jpg'
+					}, {
+						href : '226_b.jpg'
+					}, {
+						href : '227_b.jpg'
+					}, {
+						href : '230_b.jpg'
+					}, {
+						href : '233_b.jpg'
+					}, {
+						href : '234_b.jpg'
+					}, {
+						href : '237_b.jpg'
+					}, {
+						href : '241_b.jpg'
+					}, {
+						href : '242_b.jpg'
+					}, {
+						href : '243_b.jpg'
+					}, {
+						href : '245_b.jpg'
+					}, {
+						href : '250_b.jpg'
+					}, {
+						href : '252_b.jpg'
+					}, {
+						href : '254_b.jpg'
+					}, {
+						href : '257_b.jpg'
+					}, {
+						href : '258_b.jpg'
+					}, {
+						href : '262_b.jpg'
+					}, {
+						href : '263_b.jpg'
+					}, {
+						href : '270_b.jpg'
+					}, {
+						href : '272_b.jpg'
+					}, {
+						href : '278_b.jpg'
+					}, {
+						href : '279_b.jpg'
+					}, {
+						href : '285_b.jpg'
+					}, {
+						href : '291_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}, {
+						href : '309_b.jpg'
+					}, {
+						href : '310_b.jpg'
+					}, {
+						href : '311_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//fanart
+			$("#fancybox-manual-fanart").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : '#fanart'
+					}, {
+						href : '2_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '4_b.jpg'
+					}, {
+						href : '6_b.jpg'
+					}, {
+						href : '8_b.jpg'
+					}, {
+						href : '17_b.jpg'
+					}, {
+						href : '23_b.jpg'
+					}, {
+						href : '25_b.jpg'
+					}, {
+						href : '26_b.jpg'
+					}, {
+						href : '27_b.jpg'
+					}, {
+						href : '28_b.jpg'
+					}, {
+						href : '29_b.jpg'
+					}, {
+						href : '30_b.jpg'
+					}, {
+						href : '31_b.jpg'
+					}, {
+						href : '32_b.jpg'
+					}, {
+						href : '33_b.jpg'
+					}, {
+						href : '34_b.jpg'
+					}, {
+						href : '35_b.jpg'
+					}, {
+						href : '36_b.jpg'
+					}, {
+						href : '37_b.jpg'
+					}, {
+						href : '38_b.jpg'
+					}, {
+						href : '39_b.jpg'
+					}, {
+						href : '40_b.jpg'
+					}, {
+						href : '42_b.jpg'
+					}, {
+						href : '46_b.jpg'
+					}, {
+						href : '47_b.jpg'
+					}, {
+						href : '48_b.jpg'
+					}, {
+						href : '50_b.jpg'
+					}, {
+						href : '60_b.jpg'
+					}, {
+						href : '77_b.jpg'
+					}, {
+						href : '78_b.jpg'
+					}, {
+						href : '81_b.jpg'
+					}, {
+						href : '84_b.jpg'
+					}, {
+						href : '88_b.jpg'
+					}, {
+						href : '92_b.jpg'
+					}, {
+						href : '93_b.jpg'
+					}, {
+						href : '94_b.jpg'
+					}, {
+						href : '116_b.jpg'
+					}, {
+						href : '118_b.jpg'
+					}, {
+						href : '135_b.jpg'
+					}, {
+						href : '136_b.jpg'
+					}, {
+						href : '137_b.jpg'
+					}, {
+						href : '146_b.jpg'
+					}, {
+						href : '147_b.jpg'
+					}, {
+						href : '148_b.jpg'
+					}, {
+						href : '149_b.jpg'
+					}, {
+						href : '251_b.jpg'
+					}, {
+						href : '275_b.jpg'
+					}, {
+						href : '286_b.jpg'
+					}, {
+						href : '287_b.jpg'
+					}, {
+						href : '295_b.jpg'
+					}, {
+						href : '296_b.jpg'
+					}, {
+						href : '297_b.jpg'
+					}, {
+						href : '298_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}, {
+						href : '301_b.jpg'
+					}, {
+						href : '302_b.jpg'
+					}, {
+						href : '303_b.jpg'
+					}, {
+						href : '304_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//study
+			$("#fancybox-manual-study").click(function() {
+				$.fancybox.open([
+					{
+						href : '13_b.jpg',
+						title : '#study'
+					}, {
+						href : '20_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '63_b.jpg'
+					}, {
+						href : '65_b.jpg'
+					}, {
+						href : '66_b.jpg'
+					}, {
+						href : '69_b.jpg'
+					}, {
+						href : '70_b.jpg'
+					}, {
+						href : '99_b.jpg'
+					}, {
+						href : '100_b.jpg'
+					}, {
+						href : '101_b.jpg'
+					}, {
+						href : '128_b.jpg'
+					}, {
+						href : '151_b.jpg'
+					}, {
+						href : '152_b.jpg'
+					}, {
+						href : '154_b.jpg'
+					}, {
+						href : '158_b.jpg'
+					}, {
+						href : '167_b.jpg'
+					}, {
+						href : '168_b.jpg'
+					}, {
+						href : '169_b.jpg'
+					}, {
+						href : '172_b.jpg'
+					}, {
+						href : '174_b.jpg'
+					}, {
+						href : '178_b.jpg'
+					}, {
+						href : '179_b.jpg'
+					}, {
+						href : '180_b.jpg'
+					}, {
+						href : '182_b.jpg'
+					}, {
+						href : '186_b.jpg'
+					}, {
+						href : '187_b.jpg'
+					}, {
+						href : '188_b.jpg'
+					}, {
+						href : '189_b.jpg'
+					}, {
+						href : '190_b.jpg'
+					}, {
+						href : '191_b.jpg'
+					}, {
+						href : '192_b.jpg'
+					}, {
+						href : '193_b.jpg'
+					}, {
+						href : '194_b.jpg'
+					}, {
+						href : '197_b.jpg'
+					}, {
+						href : '198_b.jpg'
+					}, {
+						href : '199_b.jpg'
+					}, {
+						href : '200_b.jpg'
+					}, {
+						href : '201_b.jpg'
+					}, {
+						href : '202_b.jpg'
+					}, {
+						href : '203_b.jpg'
+					}, {
+						href : '204_b.jpg'
+					}, {
+						href : '205_b.jpg'
+					}, {
+						href : '206_b.jpg'
+					}, {
+						href : '207_b.jpg'
+					}, {
+						href : '220_b.jpg'
+					}, {
+						href : '260_b.jpg'
+					}, {
+						href : '266_b.jpg'
+					}, {
+						href : '267_b.jpg'
+					}, {
+						href : '276_b.jpg'
+					}, {
+						href : '284_b.jpg'
+					}, {
+						href : '286_b.jpg'
+					}, {
+						href : '289_b.jpg'
+					}, {
+						href : '291_b.jpg'
+					}, {
+						href : '294_b.jpg'
+					}, {
+						href : '298_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}, {
+						href : '307_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+			
+//doodle
+			$("#fancybox-manual-doodle").click(function() {
+				$.fancybox.open([
+					{
+						href : '16_b.jpg',
+						title : '#doodle'
+					}, {
+						href : '18_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '33_b.jpg'
+					}, {
+						href : '52_b.jpg'
+					}, {
+						href : '53_b.jpg'
+					}, {
+						href : '62_b.jpg'
+					}, {
+						href : '113_b.jpg'
+					}, {
+						href : '114_b.jpg'
+					}, {
+						href : '115_b.jpg'
+					}, {
+						href : '125_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '127_b.jpg'
+					}, {
+						href : '129_b.jpg'
+					}, {
+						href : '130_b.jpg'
+					}, {
+						href : '140_b.jpg'
+					}, {
+						href : '141_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '145_b.jpg'
+					}, {
+						href : '150_b.jpg'
+					}, {
+						href : '152_b.jpg'
+					}, {
+						href : '153_b.jpg'
+					}, {
+						href : '155_b.jpg'
+					}, {
+						href : '157_b.jpg'
+					}, {
+						href : '181_b.jpg'
+					}, {
+						href : '199_b.jpg'
+					}, {
+						href : '215_b.jpg'
+					}, {
+						href : '224_b.jpg'
+					}, {
+						href : '259_b.jpg'
+					}, {
+						href : '261_b.jpg'
+					}, {
+						href : '264_b.jpg'
+					}, {
+						href : '266_b.jpg'
+					}, {
+						href : '280_b.jpg'
+					}, {
+						href : '283_b.jpg'
+					}, {
+						href : '307_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}, {
+						href : '311_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});			
+
+//from life
+			$("#fancybox-manual-fl").click(function() {
+				$.fancybox.open([
+					{
+						href : '13_b.jpg',
+						title : '#from life'
+					}, {
+						href : '14_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '15_b.jpg'
+					}, {
+						href : '22_b.jpg'
+					}, {
+						href : '46_b.jpg'
+					}, {
+						href : '74_b.jpg'
+					}, {
+						href : '76_b.jpg'
+					}, {
+						href : '119_b.jpg'
+					}, {
+						href : '120_b.jpg'
+					}, {
+						href : '121_b.jpg'
+					}, {
+						href : '122_b.jpg'
+					}, {
+						href : '123_b.jpg'
+					}, {
+						href : '124_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '131_b.jpg'
+					}, {
+						href : '132_b.jpg'
+					}, {
+						href : '142_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '144_b.jpg'
+					}, {
+						href : '145_b.jpg'
+					}, {
+						href : '153_b.jpg'
+					}, {
+						href : '220_b.jpg'
+					}, {
+						href : '231_b.jpg'
+					}, {
+						href : '246_b.jpg'
+					}, {
+						href : '277_b.jpg'
+					}, {
+						href : '288_b.jpg'
+					}, {
+						href : '290_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});	
+
+//scrapbook
+			$("#fancybox-manual-sb").click(function() {
+				$.fancybox.open([
+					{
+						href : '45_b.jpg',
+						title : '#scrapbook'
+					}, {
+						href : '66_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '67_b.jpg'
+					}, {
+						href : '68_b.jpg'
+					}, {
+						href : '72_b.jpg'
+					}, {
+						href : '80_b.jpg'
+					}, {
+						href : '101_b.jpg'
+					}, {
+						href : '106_b.jpg'
+					}, {
+						href : '107_b.jpg'
+					}, {
+						href : '111_b.jpg'
+					}, {
+						href : '129_b.jpg'
+					}, {
+						href : '133_b.jpg'
+					}, {
+						href : '134_b.jpg'
+					}, {
+						href : '138_b.jpg'
+					}, {
+						href : '139_b.jpg'
+					}, {
+						href : '148_b.jpg'
+					}, {
+						href : '161_b.jpg'
+					}, {
+						href : '165_b.jpg'
+					}, {
+						href : '172_b.jpg'
+					}, {
+						href : '173_b.jpg'
+					}, {
+						href : '212_b.jpg'
+					}, {
+						href : '213_b.jpg'
+					}, {
+						href : '268_b.jpg'
+					}, {
+						href : '270_b.jpg'
+					}, {
+						href : '293_b.jpg'
+					}, {
+						href : '295_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});			
+
+//character design
+			$("#fancybox-manual-cd").click(function() {
+				$.fancybox.open([
+					{
+						href : '12_b.jpg',
+						title : '#character design'
+					}, {
+						href : '104_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '105_b.jpg'
+					}, {
+						href : '106_b.jpg'
+					}, {
+						href : '150_b.jpg'
+					}, {
+						href : '216_b.jpg'
+					}, {
+						href : '228_b.jpg'
+					}, {
+						href : '229_b.jpg'
+					}, {
+						href : '235_b.jpg'
+					}, {
+						href : '240_b.jpg'
+					}, {
+						href : '253_b.jpg'
+					}, {
+						href : '271_b.jpg'
+					}, {
+						href : '274_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});			
+			
+//architecture
+			$("#fancybox-manual-arch").click(function() {
+				$.fancybox.open([
+					{
+						href : '43_b.jpg',
+						title : '#architecture'
+					}, {
+						href : '44_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '45_b.jpg'
+					}, {
+						href : '113_b.jpg'
+					}, {
+						href : '142_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '144_b.jpg'
+					}, {
+						href : '210_b.jpg'
+					}, {
+						href : '239_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});						
+
+//journal
+			$("#fancybox-manual-jour").click(function() {
+				$.fancybox.open([
+					{
+						href : '83_b.jpg',
+						title : '#journal'
+					}, {
+						href : '175_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '176_b.jpg'
+					}, {
+						href : '177_b.jpg'
+					}, {
+						href : '183_b.jpg'
+					}, {
+						href : '184_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});		
+
+//pencil
+			$("#fancybox-manual-pencil").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : '#pencil'
+					}, {
+						href : '2_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}, {
+						href : '4_b.jpg'
+					}, {
+						href : '5_b.jpg'
+					}, {
+						href : '6_b.jpg'
+					}, {
+						href : '7_b.jpg'
+					}, {
+						href : '8_b.jpg'
+					}, {
+						href : '9_b.jpg'
+					}, {
+						href : '10_b.jpg'
+					}, {
+						href : '11_b.jpg'
+					}, {
+						href : '13_b.jpg'
+					}, {
+						href : '14_b.jpg'
+					}, {
+						href : '15_b.jpg'
+					}, {
+						href : '17_b.jpg'
+					}, {
+						href : '18_b.jpg'
+					}, {
+						href : '19_b.jpg'
+					}, {
+						href : '20_b.jpg'
+					}, {
+						href : '21_b.jpg'
+					}, {
+						href : '22_b.jpg'
+					}, {
+						href : '23_b.jpg'
+					}, {
+						href : '24_b.jpg'
+					}, {
+						href : '25_b.jpg'
+					}, {
+						href : '26_b.jpg'
+					}, {
+						href : '27_b.jpg'
+					}, {
+						href : '28_b.jpg'
+					}, {
+						href : '29_b.jpg'
+					}, {
+						href : '30_b.jpg'
+					}, {
+						href : '32_b.jpg'
+					}, {
+						href : '33_b.jpg'
+					}, {
+						href : '34_b.jpg'
+					}, {
+						href : '35_b.jpg'
+					}, {
+						href : '36_b.jpg'
+					}, {
+						href : '37_b.jpg'
+					}, {
+						href : '38_b.jpg'
+					}, {
+						href : '39_b.jpg'
+					}, {
+						href : '40_b.jpg'
+					}, {
+						href : '41_b.jpg'
+					}, {
+						href : '42_b.jpg'
+					}, {
+						href : '43_b.jpg'
+					}, {
+						href : '44_b.jpg'
+					}, {
+						href : '45_b.jpg'
+					}, {
+						href : '46_b.jpg'
+					}, {
+						href : '47_b.jpg'
+					}, {
+						href : '48_b.jpg'
+					}, {
+						href : '49_b.jpg'
+					}, {
+						href : '50_b.jpg'
+					}, {
+						href : '51_b.jpg'
+					}, {
+						href : '52_b.jpg'
+					}, {
+						href : '53_b.jpg'
+					}, {
+						href : '54_b.jpg'
+					}, {
+						href : '55_b.jpg'
+					}, {
+						href : '56_b.jpg'
+					}, {
+						href : '57_b.jpg'
+					}, {
+						href : '58_b.jpg'
+					}, {
+						href : '59_b.jpg'
+					}, {
+						href : '60_b.jpg'
+					}, {
+						href : '61_b.jpg'
+					}, {
+						href : '62_b.jpg'
+					}, {
+						href : '63_b.jpg'
+					}, {
+						href : '64_b.jpg'
+					}, {
+						href : '65_b.jpg'
+					}, {
+						href : '66_b.jpg'
+					}, {
+						href : '69_b.jpg'
+					}, {
+						href : '70_b.jpg'
+					}, {
+						href : '71_b.jpg'
+					}, {
+						href : '73_b.jpg'
+					}, {
+						href : '74_b.jpg'
+					}, {
+						href : '75_b.jpg'
+					}, {
+						href : '76_b.jpg'
+					}, {
+						href : '77_b.jpg'
+					}, {
+						href : '78_b.jpg'
+					}, {
+						href : '79_b.jpg'
+					}, {
+						href : '81_b.jpg'
+					}, {
+						href : '82_b.jpg'
+					}, {
+						href : '83_b.jpg'
+					}, {
+						href : '84_b.jpg'
+					}, {
+						href : '85_b.jpg'
+					}, {
+						href : '86_b.jpg'
+					}, {
+						href : '87_b.jpg'
+					}, {
+						href : '89_b.jpg'
+					}, {
+						href : '90_b.jpg'
+					}, {
+						href : '91_b.jpg'
+					}, {
+						href : '101_b.jpg'
+					}, {
+						href : '102_b.jpg'
+					}, {
+						href : '103_b.jpg'
+					}, {
+						href : '104_b.jpg'
+					}, {
+						href : '105_b.jpg'
+					}, {
+						href : '106_b.jpg'
+					}, {
+						href : '107_b.jpg'
+					}, {
+						href : '108_b.jpg'
+					}, {
+						href : '109_b.jpg'
+					}, {
+						href : '112_b.jpg'
+					}, {
+						href : '113_b.jpg'
+					}, {
+						href : '114_b.jpg'
+					}, {
+						href : '115_b.jpg'
+					}, {
+						href : '117_b.jpg'
+					}, {
+						href : '118_b.jpg'
+					}, {
+						href : '123_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '128_b.jpg'
+					}, {
+						href : '130_b.jpg'
+					}, {
+						href : '147_b.jpg'
+					}, {
+						href : '153_b.jpg'
+					}, {
+						href : '159_b.jpg'
+					}, {
+						href : '161_b.jpg'
+					}, {
+						href : '162_b.jpg'
+					}, {
+						href : '163_b.jpg'
+					}, {
+						href : '166_b.jpg'
+					}, {
+						href : '168_b.jpg'
+					}, {
+						href : '170_b.jpg'
+					}, {
+						href : '173_b.jpg'
+					}, {
+						href : '174_b.jpg'
+					}, {
+						href : '175_b.jpg'
+					}, {
+						href : '178_b.jpg'
+					}, {
+						href : '179_b.jpg'
+					}, {
+						href : '180_b.jpg'
+					}, {
+						href : '181_b.jpg'
+					}, {
+						href : '182_b.jpg'
+					}, {
+						href : '183_b.jpg'
+					}, {
+						href : '184_b.jpg'
+					}, {
+						href : '186_b.jpg'
+					}, {
+						href : '187_b.jpg'
+					}, {
+						href : '188_b.jpg'
+					}, {
+						href : '190_b.jpg'
+					}, {
+						href : '191_b.jpg'
+					}, {
+						href : '192_b.jpg'
+					}, {
+						href : '193_b.jpg'
+					}, {
+						href : '194_b.jpg'
+					}, {
+						href : '195_b.jpg'
+					}, {
+						href : '196_b.jpg'
+					}, {
+						href : '197_b.jpg'
+					}, {
+						href : '198_b.jpg'
+					}, {
+						href : '199_b.jpg'
+					}, {
+						href : '200_b.jpg'
+					}, {
+						href : '201_b.jpg'
+					}, {
+						href : '202_b.jpg'
+					}, {
+						href : '203_b.jpg'
+					}, {
+						href : '204_b.jpg'
+					}, {
+						href : '205_b.jpg'
+					}, {
+						href : '206_b.jpg'
+					}, {
+						href : '207_b.jpg'
+					}, {
+						href : '209_b.jpg'
+					}, {
+						href : '210_b.jpg'
+					}, {
+						href : '211_b.jpg'
+					}, {
+						href : '212_b.jpg'
+					}, {
+						href : '214_b.jpg'
+					}, {
+						href : '215_b.jpg'
+					}, {
+						href : '216_b.jpg'
+					}, {
+						href : '217_b.jpg'
+					}, {
+						href : '218_b.jpg'
+					}, {
+						href : '219_b.jpg'
+					}, {
+						href : '220_b.jpg'
+					}, {
+						href : '221_b.jpg'
+					}, {
+						href : '222_b.jpg'
+					}, {
+						href : '223_b.jpg'
+					}, {
+						href : '224_b.jpg'
+					}, {
+						href : '225_b.jpg'
+					}, {
+						href : '226_b.jpg'
+					}, {
+						href : '227_b.jpg'
+					}, {
+						href : '228_b.jpg'
+					}, {
+						href : '229_b.jpg'
+					}, {
+						href : '230_b.jpg'
+					}, {
+						href : '231_b.jpg'
+					}, {
+						href : '232_b.jpg'
+					}, {
+						href : '233_b.jpg'
+					}, {
+						href : '236_b.jpg'
+					}, {
+						href : '237_b.jpg'
+					}, {
+						href : '238_b.jpg'
+					}, {
+						href : '239_b.jpg'
+					}, {
+						href : '240_b.jpg'
+					}, {
+						href : '241_b.jpg'
+					}, {
+						href : '245_b.jpg'
+					}, {
+						href : '246_b.jpg'
+					}, {
+						href : '247_b.jpg'
+					}, {
+						href : '248_b.jpg'
+					}, {
+						href : '252_b.jpg'
+					}, {
+						href : '253_b.jpg'
+					}, {
+						href : '254_b.jpg'
+					}, {
+						href : '255_b.jpg'
+					}, {
+						href : '257_b.jpg'
+					}, {
+						href : '258_b.jpg'
+					}, {
+						href : '259_b.jpg'
+					}, {
+						href : '260_b.jpg'
+					}, {
+						href : '261_b.jpg'
+					}, {
+						href : '262_b.jpg'
+					}, {
+						href : '263_b.jpg'
+					}, {
+						href : '264_b.jpg'
+					}, {
+						href : '265_b.jpg'
+					}, {
+						href : '266_b.jpg'
+					}, {
+						href : '269_b.jpg'
+					}, {
+						href : '270_b.jpg'
+					}, {
+						href : '271_b.jpg'
+					}, {
+						href : '272_b.jpg'
+					}, {
+						href : '273_b.jpg'
+					}, {
+						href : '274_b.jpg'
+					}, {
+						href : '275_b.jpg'
+					}, {
+						href : '276_b.jpg'
+					}, {
+						href : '277_b.jpg'
+					}, {
+						href : '280_b.jpg'
+					}, {
+						href : '281_b.jpg'
+					}, {
+						href : '282_b.jpg'
+					}, {
+						href : '283_b.jpg'
+					}, {
+						href : '284_b.jpg'
+					}, {
+						href : '285_b.jpg'
+					}, {
+						href : '298_b.jpg'
+					}, {
+						href : '302_b.jpg'
+					}, {
+						href : '303_b.jpg'
+					}, {
+						href : '304_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//ink
+			$("#fancybox-manual-ink").click(function() {
+				$.fancybox.open([
+					{
+						href : '18_b.jpg',
+						title : '#ink'
+					}, {
+						href : '19_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '31_b.jpg'
+					}, {
+						href : '62_b.jpg'
+					}, {
+						href : '79_b.jpg'
+					}, {
+						href : '88_b.jpg'
+					}, {
+						href : '95_b.jpg'
+					}, {
+						href : '96_b.jpg'
+					}, {
+						href : '97_b.jpg'
+					}, {
+						href : '98_b.jpg'
+					}, {
+						href : '100_b.jpg'
+					}, {
+						href : '110_b.jpg'
+					}, {
+						href : '113_b.jpg'
+					}, {
+						href : '114_b.jpg'
+					}, {
+						href : '115_b.jpg'
+					}, {
+						href : '116_b.jpg'
+					}, {
+						href : '117_b.jpg'
+					}, {
+						href : '125_b.jpg'
+					}, {
+						href : '127_b.jpg'
+					}, {
+						href : '129_b.jpg'
+					}, {
+						href : '130_b.jpg'
+					}, {
+						href : '131_b.jpg'
+					}, {
+						href : '132_b.jpg'
+					}, {
+						href : '133_b.jpg'
+					}, {
+						href : '134_b.jpg'
+					}, {
+						href : '135_b.jpg'
+					}, {
+						href : '136_b.jpg'
+					}, {
+						href : '140_b.jpg'
+					}, {
+						href : '141_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '144_b.jpg'
+					}, {
+						href : '145_b.jpg'
+					}, {
+						href : '146_b.jpg'
+					}, {
+						href : '149_b.jpg'
+					}, {
+						href : '154_b.jpg'
+					}, {
+						href : '155_b.jpg'
+					}, {
+						href : '156_b.jpg'
+					}, {
+						href : '160_b.jpg'
+					}, {
+						href : '169_b.jpg'
+					}, {
+						href : '170_b.jpg'
+					}, {
+						href : '171_b.jpg'
+					}, {
+						href : '172_b.jpg'
+					}, {
+						href : '179_b.jpg'
+					}, {
+						href : '180_b.jpg'
+					}, {
+						href : '183_b.jpg'
+					}, {
+						href : '195_b.jpg'
+					}, {
+						href : '196_b.jpg'
+					}, {
+						href : '197_b.jpg'
+					}, {
+						href : '198_b.jpg'
+					}, {
+						href : '208_b.jpg'
+					}, {
+						href : '234_b.jpg'
+					}, {
+						href : '238_b.jpg'
+					}, {
+						href : '239_b.jpg'
+					}, {
+						href : '240_b.jpg'
+					}, {
+						href : '241_b.jpg'
+					}, {
+						href : '242_b.jpg'
+					}, {
+						href : '243_b.jpg'
+					}, {
+						href : '244_b.jpg'
+					}, {
+						href : '249_b.jpg'
+					}, {
+						href : '250_b.jpg'
+					}, {
+						href : '251_b.jpg'
+					}, {
+						href : '254_b.jpg'
+					}, {
+						href : '255_b.jpg'
+					}, {
+						href : '256_b.jpg'
+					}, {
+						href : '257_b.jpg'
+					}, {
+						href : '261_b.jpg'
+					}, {
+						href : '262_b.jpg'
+					}, {
+						href : '263_b.jpg'
+					}, {
+						href : '264_b.jpg'
+					}, {
+						href : '265_b.jpg'
+					}, {
+						href : '266_b.jpg'
+					}, {
+						href : '267_b.jpg'
+					}, {
+						href : '284_b.jpg'
+					}, {
+						href : '286_b.jpg'
+					}, {
+						href : '287_b.jpg'
+					}, {
+						href : '288_b.jpg'
+					}, {
+						href : '289_b.jpg'
+					}, {
+						href : '290_b.jpg'
+					}, {
+						href : '291_b.jpg'
+					}, {
+						href : '292_b.jpg'
+					}, {
+						href : '293_b.jpg'
+					}, {
+						href : '294_b.jpg'
+					}, {
+						href : '295_b.jpg'
+					}, {
+						href : '296_b.jpg'
+					}, {
+						href : '297_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}, {
+						href : '301_b.jpg'
+					}, {
+						href : '302_b.jpg'
+					}, {
+						href : '303_b.jpg'
+					}, {
+						href : '305_b.jpg'
+					}, {
+						href : '306_b.jpg'
+					}, {
+						href : '307_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}, {
+						href : '309_b.jpg'
+					}, {
+						href : '310_b.jpg'
+					}, {
+						href : '311_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//brush pen
+			$("#fancybox-manual-bp").click(function() {
+				$.fancybox.open([
+					{
+						href : '8_b.jpg',
+						title : '#brush pen'
+					}, {
+						href : '12_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '16_b.jpg'
+					}, {
+						href : '17_b.jpg'
+					}, {
+						href : '18_b.jpg'
+					}, {
+						href : '23_b.jpg'
+					}, {
+						href : '24_b.jpg'
+					}, {
+						href : '26_b.jpg'
+					}, {
+						href : '27_b.jpg'
+					}, {
+						href : '29_b.jpg'
+					}, {
+						href : '31_b.jpg'
+					}, {
+						href : '33_b.jpg'
+					}, {
+						href : '35_b.jpg'
+					}, {
+						href : '36_b.jpg'
+					}, {
+						href : '37_b.jpg'
+					}, {
+						href : '38_b.jpg'
+					}, {
+						href : '39_b.jpg'
+					}, {
+						href : '40_b.jpg'
+					}, {
+						href : '46_b.jpg'
+					}, {
+						href : '47_b.jpg'
+					}, {
+						href : '48_b.jpg'
+					}, {
+						href : '49_b.jpg'
+					}, {
+						href : '60_b.jpg'
+					}, {
+						href : '64_b.jpg'
+					}, {
+						href : '101_b.jpg'
+					}, {
+						href : '102_b.jpg'
+					}, {
+						href : '107_b.jpg'
+					}, {
+						href : '108_b.jpg'
+					}, {
+						href : '109_b.jpg'
+					}, {
+						href : '119_b.jpg'
+					}, {
+						href : '120_b.jpg'
+					}, {
+						href : '124_b.jpg'
+					}, {
+						href : '125_b.jpg'
+					}, {
+						href : '152_b.jpg'
+					}, {
+						href : '170_b.jpg'
+					}, {
+						href : '216_b.jpg'
+					}, {
+						href : '223_b.jpg'
+					}, {
+						href : '225_b.jpg'
+					}, {
+						href : '226_b.jpg'
+					}, {
+						href : '227_b.jpg'
+					}, {
+						href : '229_b.jpg'
+					}, {
+						href : '230_b.jpg'
+					}, {
+						href : '231_b.jpg'
+					}, {
+						href : '233_b.jpg'
+					}, {
+						href : '235_b.jpg'
+					}, {
+						href : '237_b.jpg'
+					}, {
+						href : '238_b.jpg'
+					}, {
+						href : '240_b.jpg'
+					}, {
+						href : '241_b.jpg'
+					}, {
+						href : '245_b.jpg'
+					}, {
+						href : '246_b.jpg'
+					}, {
+						href : '247_b.jpg'
+					}, {
+						href : '248_b.jpg'
+					}, {
+						href : '253_b.jpg'
+					}, {
+						href : '256_b.jpg'
+					}, {
+						href : '258_b.jpg'
+					}, {
+						href : '264_b.jpg'
+					}, {
+						href : '281_b.jpg'
+					}, {
+						href : '296_b.jpg'
+					}, {
+						href : '308_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+//color
+			$("#fancybox-manual-col").click(function() {
+				$.fancybox.open([
+					{
+						href : '86_b.jpg',
+						title : '#color'
+					}, {
+						href : '87_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '88_b.jpg'
+					}, {
+						href : '92_b.jpg'
+					}, {
+						href : '93_b.jpg'
+					}, {
+						href : '94_b.jpg'
+					}, {
+						href : '117_b.jpg'
+					}, {
+						href : '118_b.jpg'
+					}, {
+						href : '120_b.jpg'
+					}, {
+						href : '124_b.jpg'
+					}, {
+						href : '126_b.jpg'
+					}, {
+						href : '129_b.jpg'
+					}, {
+						href : '130_b.jpg'
+					}, {
+						href : '131_b.jpg'
+					}, {
+						href : '131_b.jpg'
+					}, {
+						href : '136_b.jpg'
+					}, {
+						href : '137_b.jpg'
+					}, {
+						href : '140_b.jpg'
+					}, {
+						href : '141_b.jpg'
+					}, {
+						href : '142_b.jpg'
+					}, {
+						href : '166_b.jpg'
+					}, {
+						href : '167_b.jpg'
+					}, {
+						href : '175_b.jpg'
+					}, {
+						href : '182_b.jpg'
+					}, {
+						href : '186_b.jpg'
+					}, {
+						href : '187_b.jpg'
+					}, {
+						href : '188_b.jpg'
+					}, {
+						href : '190_b.jpg'
+					}, {
+						href : '191_b.jpg'
+					}, {
+						href : '192_b.jpg'
+					}, {
+						href : '193_b.jpg'
+					}, {
+						href : '194_b.jpg'
+					}, {
+						href : '197_b.jpg'
+					}, {
+						href : '210_b.jpg'
+					}, {
+						href : '212_b.jpg'
+					}, {
+						href : '296_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+			
+//ballpoint pen
+			$("#fancybox-manual-ball").click(function() {
+				$.fancybox.open([
+					{
+						href : '134_b.jpg',
+						title : '#ballpoint pen'
+					}, {
+						href : '135_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '136_b.jpg'
+					}, {
+						href : '137_b.jpg'
+					}, {
+						href : '138_b.jpg'
+					}, {
+						href : '142_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '146_b.jpg'
+					}, {
+						href : '147_b.jpg'
+					}, {
+						href : '148_b.jpg'
+					}, {
+						href : '149_b.jpg'
+					}, {
+						href : '150_b.jpg'
+					}, {
+						href : '151_b.jpg'
+					}, {
+						href : '152_b.jpg'
+					}, {
+						href : '153_b.jpg'
+					}, {
+						href : '156_b.jpg'
+					}, {
+						href : '157_b.jpg'
+					}, {
+						href : '158_b.jpg'
+					}, {
+						href : '159_b.jpg'
+					}, {
+						href : '160_b.jpg'
+					}, {
+						href : '161_b.jpg'
+					}, {
+						href : '164_b.jpg'
+					}, {
+						href : '165_b.jpg'
+					}, {
+						href : '167_b.jpg'
+					}, {
+						href : '212_b.jpg'
+					}, {
+						href : '214_b.jpg'
+					}, {
+						href : '215_b.jpg'
+					}, {
+						href : '267_b.jpg'
+					}, {
+						href : '271_b.jpg'
+					}, {
+						href : '277_b.jpg'
+					}, {
+						href : '278_b.jpg'
+					}, {
+						href : '279_b.jpg'
+					}, {
+						href : '280_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+			
+//sharpie
+			$("#fancybox-manual-sharpie").click(function() {
+				$.fancybox.open([
+					{
+						href : '121_b.jpg',
+						title : '#sharpie'
+					}, {
+						href : '122_b.jpg'
+						//title : '2nd title'
+					}, {
+						href : '123_b.jpg'
+					}, {
+						href : '141_b.jpg'
+					}, {
+						href : '143_b.jpg'
+					}, {
+						href : '185_b.jpg'
+					}, {
+						href : '199_b.jpg'
+					}, {
+						href : '200_b.jpg'
+					}, {
+						href : '209_b.jpg'
+					}, {
+						href : '210_b.jpg'
+					}, {
+						href : '299_b.jpg'
+					}, {
+						href : '300_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});			
+
+
+
+						
+
+		});
+	</script>
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+		body {
+			max-width: 700px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+
+	<br />
+	<h1>#8MOLES</h1>
+	<br />
+
+<nav>
+	<ul>
+	<li><em>medium</em></li>
+		<li><a class="text" id="fancybox-manual-pencil" href="javascript:;">#pencil</a></li>
+		<li><a class="a3 text" id="fancybox-manual-ink" href="javascript:;">#ink</a></li>
+		<li><a class="a3 text" id="fancybox-manual-bp" href="javascript:;">#brush pen</a></li>
+		<li><a class="a6 text" id="fancybox-manual-col" href="javascript:;">#color</a></li>
+		<li><a class="a6 text" id="fancybox-manual-ball" href="javascript:;">#ballpoint pen</a></li>
+		<li><a class="a8 text" id="fancybox-manual-sharpie" href="javascript:;">#sharpie</a></li>	<br />
+	<li><em>genre</em></li>
+		<li><a class="text" id="fancybox-manual-people" href="javascript:;">#people</a></li>
+		<li><a class="a1 text" id="fancybox-manual-comic" href="javascript:;">#comic</a></li>
+		<li><a class="a2 text" id="fancybox-manual-fanart" href="javascript:;">#fanart</a></li>
+		<li><a class="a2 text" id="fancybox-manual-study" href="javascript:;">#study</a></li>
+		<li><a class="a4 text" id="fancybox-manual-doodle" href="javascript:;">#doodle</a></li>		
+		<li><a class="a5 text" id="fancybox-manual-fl" href="javascript:;">#from life</a></li>
+		<li><a class="a5 text" id="fancybox-manual-sb" href="javascript:;">#scrapbook</a></li>
+		<li><a class="a6 text" id="fancybox-manual-cd" href="javascript:;">#character design</a></li>
+		<li><a class="a7 text" id="fancybox-manual-arch" href="javascript:;">#architecture</a></li>
+		<li><a class="a8 text" id="fancybox-manual-jour" href="javascript:;">#journal</a></li>  <br />
+	<li><em>motif</em></li>
+		<li><a class="text" id="fancybox-manual-selfie" href="javascript:;">#selfie</a></li>
+		<li><a class="a1 text" id="fancybox-manual-at" href="javascript:;">#adventure time</a></li>
+		<li><a class="a3 text" id="fancybox-manual-dan" href="javascript:;">#danisnotonfire</a></li>
+		<li><a class="a4 text" id="fancybox-manual-futurama" href="javascript:;">#futurama</a></li>
+		<li><a class="a5 text" id="fancybox-manual-phil" href="javascript:;">#amazingphil</a></li>		
+		<li><a class="a6 text" id="fancybox-manual-dw" href="javascript:;">#doctor who</a></li>
+		<li><a class="a6 text" id="fancybox-manual-yj" href="javascript:;">#young justice</a></li>  
+		<li><a class="a8 text" id="fancybox-manual-ny" href="javascript:;">#new york</a></li>
+		<li><a class="a8 text" id="fancybox-manual-sw" href="javascript:;">#star wars</a></li>  <br />
+	<li><em>year</em></li>
+		<li><a class="a7 text" id="fancybox-manual-k" href="javascript:;">#2011</a></li>
+		<li><a class="a5 text" id="fancybox-manual-l" href="javascript:;">#2012</a></li>
+		<li><a class="a3 text" id="fancybox-manual-m" href="javascript:;">#2013</a></li>
+		<li><a class="text" id="fancybox-manual-n" href="javascript:;">#2014</a></li>		 <br />
+	
+	</ul>
+</nav>
+
+<div id="container">
+
+	<p>
+		<a id="fancybox-manual-c" href="javascript:;"><img class="cover" src="1_s.jpg" alt="" /></a>
+		<a id="fancybox-manual-d" href="javascript:;"><img class="cover" src="2_s.jpg" alt="" /></a>
+		<a id="fancybox-manual-e" href="javascript:;"><img class="cover" src="3_s.jpg" alt="" /></a>
+		<a id="fancybox-manual-f" href="javascript:;"><img class="cover" src="4_s.jpg" alt="" /></a>
+		<a id="fancybox-manual-g" href="javascript:;"><img class="cover" src="5_s.jpg" alt="" /></a>
+		<a id="fancybox-manual-h" href="javascript:;"><img class="cover" src="6_s.jpg" alt="" /></a>
+		<a id="fancybox-manual-i" href="javascript:;"><img class="cover" src="7_s.jpg" alt="" /></a>
+		<a id="fancybox-manual-j" href="javascript:;"><img class="cover" src="8_s.jpg" alt="" /></a>
+	</p>
+
+</div>
+
+</body>
+</html>
