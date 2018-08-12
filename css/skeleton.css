@@ -179,38 +179,6 @@ img {
     border: solid lightgrey 1px;
 }
 
-/* Social Nav
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.social-nav {
-/*    margin: 4em -3em 0;*/
-    padding: 1em 0;
-/*    background: #B51C35;*/
-}
-
-.social-nav ul {
-    -js-display: flex;
-    display: flex;
-    justify-content: center;
-
-    padding: 0;
-    list-style-type: none;
-}
-
-.social-nav a {
-    padding: 1em;
-    color:dimgrey;
-}
-
-.social-nav svg {
-    width: 1.4em;
-    height: auto;
-
-}
-
-.social-nav path {
-    fill: #000;
-}
-
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
@@ -336,7 +304,8 @@ label > .label-body {
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 ul {
-  list-style: circle inside; }
+  list-style: circle inside; 
+}
 ol {
   list-style: decimal inside; }
 ol, ul {
@@ -418,6 +387,38 @@ form {
 .u-pull-left {
   float: left; }
 
+
+/* Social Nav
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.social-nav {
+/*    margin: 4em -3em 0;*/
+    padding: 1em 0;
+/*    background: #B51C35;*/
+}
+
+.social-nav ul {
+    -js-display: flex;
+    display: flex;
+    justify-content: center;
+
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-nav a {
+    padding: 1em;
+    color:dimgrey;
+}
+
+.social-nav svg {
+    width: 1.4em;
+    height: auto;
+
+}
+
+.social-nav path {
+    fill: #000;
+}
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
