@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Bootstrap</title>
+</head>
+<body data-spy="scroll" data-target="#navbar-site" data-offset="80">
+
+  <style>
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: '>'
+    }
+  </style>
+
+
+<!-- jumbotron possible here -->
+  <header class="d-none d-sm-block d-sm-none d-md-block clearfix p-5" style="height: 30vh;  background: #fc00ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ no-repeat center center; background-size: cover; ">
+ <!-- background: url(images/clouds-heaven-outdoors-479821.jpg); margin-bottom: 2rem; -->
+    <!-- <div class="container"> -->
+      <div class="row">
+        <div class="col-12 display-2 text-center text-white a">bootstrap playground</div>
+        <!-- <div class="d-none col-12 display-1 text-center text-white">bootstrap playground</div> -->
+
+      </div><!-- row -->
+    <!-- </div> -->
+  </header>
+<!-- navigation -->
+  <nav id="navbar-site" class="sticky-top navbar bg-dark navbar-dark navbar-expand-sm mb-5 pb-2">
+    <div class="container">
+      <div class="navbar-brand">bootstrap playground</div>
+
+      <button class="navbar-toggler" type="button"
+      data-toggle="collapse" data-target="#myTogglerNav"
+      aria-controls="myTogglerNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="myTogglerNav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link " href="#buttons">Consequat</a>
+
+          <div class="dropdown">
+            <a class="nav-item nav-link dropdown-toggle"
+            data-toggle="dropdown" id="servicesDropdown"
+            aria-haspopup="true" aria-expanded="false"
+            href="#">Laboris</a>
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a class="dropdown-item" href="#">Commodo</a>
+              <a class="dropdown-item" href="#">Excepteur</a>
+              <a class="dropdown-item" href="#">Deserunt</a>
+              <a class="dropdown-item" href="#">Aliquip</a>
+            </div>
+          </div><!-- dropdown -->
+
+          <a class="nav-item nav-link" href="#breadcrumbs">Voluptate</a>
+          <a class="nav-item nav-link" href="#cards">Aute</a>
+          <a class="nav-item nav-link" href="#media-objects">Veniam</a>
+          <a class="nav-item nav-link" href="#tooltips-popovers">Fugiat</a>
+        </div><!-- navbar nav -->
+      </div><!-- collapse -->
+
+      <form class="form-inline d-none d-sm-block">
+        <div class="input-group">
+          <input class="form-control mr-1" type="text" placeholder="Search">
+          <div class="input-group-append">
+            <button class="btn btn-outline-light" type="submit">Go</button>
+          </div>
+        </div>
+      </form>
+    </div><!-- container -->
+  </nav>
+
+<!-- main content container -->
+  <div class="container">
+
+  <section id="container">
+    <div class="row pb-3">
+        <div class="col-md-4">
+          <div class="h1">Heading 1</div>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div><!-- col -->
+        <div class="col-md-8">
+          <p class="lead"><strong>Lead paragraph:</strong> Aliquip veniam qui non labore proident proident adipisicing ipsum incididunt. </p>
+          <p>Id Lorem labore cupidatat laboris adipisicing irure non aute culpa fugiat dolore consectetur esse veniam. Ea dolore ullamco Lorem dolore non occaecat aute quis amet Lorem consectetur. Sit irure eiusmod nisi laborum tempor qui ea sit incididunt ullamco sint ex laboris duis non consectetur. Laboris ullamco Lorem voluptate proident ea cupidatat ullamco in fugiat nulla. Aliquip nostrud pariatur officia id veniam velit Lorem cillum est occaecat tempor pariatur excepteur. Laboris adipisicing ex magna consectetur esse laboris fugiat tempor proident.</p>
+      </div><!-- col -->
+    </div><!-- row -->
+
+    <div class="row mb-3">
+      <div class="col-md-9 align-self-center">
+        <blockquote class="p-4 blockquote bg-light">Officia sit nulla Lorem in consequat culpa quis in adipisicing ex elit. Elit minim ex pariatur veniam ipsum do occaecat minim. Mollit ullamco elit elit officia officia veniam adipisicing duis laborum. Dolore aliqua mollit voluptate qui reprehenderit et reprehenderit aute non.
+        <div class="blockquote-footer">Jan Michael Vincent</div>
+        </blockquote>
+      </div><!-- col -->
+      <div class="col-md-3">
+        <figure>
+          <img class="img-fluid rounded-circle" src="images/lake-milky-way-mountain-114251 copy.jpg" alt="clouds">
+          <figcaption class="text-center p-2">rounded circle</figcaption>
+        </figure>
+      </div><!-- col -->
+    </div><!-- row -->
+
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <h3>list</h3>
+        <ul>
+          <li><mark>mark</mark></li>
+          <li><strong>strong</strong></li>
+          <li><em>em</em></li>
+          <li><del>del</del></li>
+          <li><small>small</small></li>
+        </ul>
+      </div><!-- col -->
+      <div class="col-md-4">
+        <h3>list-unstyled</h3>
+        <ul class="list-unstyled">
+          <li class="bg-info">info</li>
+          <li class="bg-warning">warning</li>
+          <li class="bg-danger">danger</li>
+          <li class="bg-success">success</li>
+          <li class="bg-dark text-white">dark</li>
+        </ul>
+      </div><!-- col -->
+      <div class="col-md-4 align-self-center">
+        <h3>inline list</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item text-primary">primary</li>
+          <li class="list-inline-item text-secondary">secondary</li>
+          <li class="list-inline-item bg-info text-light">light</li>
+          <li class="list-inline-item text-dark">dark</li>
+        </ul>
+      </div><!-- col -->
+    </div><!-- row -->
+  </section>
+
+  <section id="figures">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <figure>
+          <img class="img-fluid" src="images/clouds-heaven-outdoors-479821.jpg" alt="clouds">
+          <figcaption class="text-center p-2">rectangle</figcaption>
+        </figure>
+      </div><!-- col -->
+        <div class="col-md-6">
+          <figure>
+            <img class="img-fluid rounded" src="images/4k-wallpaper-calm-waters-dark-1252869.jpg" alt="clouds">
+            <figcaption class="text-center p-2">rounded corners</figcaption>
+          </figure>
+        </div><!-- col -->
+    </div><!-- row -->
+    <div class="row">
+
+    </div><!-- row -->
+  </section>
+
+  <section id="buttons" style="margin-top: 80px">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2>Buttons</h2>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <h4>Types</h4>
+        <a class="btn btn-primary" href="#" role="button">Link</a>
+        <button class="btn btn-primary" type="submit">Button</button>
+        <input class="btn btn-primary" type="button" value="Input">
+        <h4>Contextual Classes</h4>
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-info">Info</button>
+        <button class="btn btn-light">Light</button>
+        <button class="btn btn-dark">Dark</button>
+        <h4>Outline</h4>
+        <button class="btn btn-outline-primary">Primary</button>
+        <button class="btn btn-outline-secondary">Secondary</button>
+        <button class="btn btn-outline-success">Success</button>
+        <button class="btn btn-outline-danger">Danger</button>
+        <button class="btn btn-outline-warning">Warning</button>
+        <button class="btn btn-outline-info">Info</button>
+        <button class="btn btn-outline-light">Light</button>
+        <button class="btn btn-outline-dark">Dark</button>
+        <h4>Sizes</h4>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary btn-block">Block</button>
+      </div><!-- col -->
+      <div class="col-md-6">
+        <h4>States</h4>
+        <h5>Active</h5>
+        <button class="btn btn-primary active">Active Button</button>
+        <h5>Disabled</h5hidden>
+        <button class="btn btn-primary disabled">Disabled Button</button>
+        <a class="btn btn-primary disabled" href="#">Disabled Link Button</a>
+        <h4>Button Groups</h4>
+        <div class="btn-toolbar" aria-label="toolbar">
+          <div class="btn-group mb-2 mr-2" aria-label="common pets">
+            <button type="button" class="btn btn-primary active">Cat</button>
+            <button type="button" class="btn btn-primary">Dog</button>
+            <button type="button" class="btn btn-primary">Fish</button>
+            <button type="button" class="btn btn-primary">Bird</button>
+          </div>
+          <div class="btn-group-sm mb-2" aria-label="exotic pets">
+            <button type="button" class="btn btn-primary">Amphibian</button>
+            <button type="button" class="btn btn-primary active">Reptile</button>
+            <button type="button" class="btn btn-primary disabled">Other</button>
+          </div>
+          <div class="btn-group-lg mb-2" aria-label="exotic pets">
+            <button type="button" class="btn btn-primary">Amphibian</button>
+            <button type="button" class="btn btn-primary active">Reptile</button>
+            <button type="button" class="btn btn-primary disabled">Other</button>
+          </div>
+        </div><!--toolbar-->
+        <div class="btn-group btn-group-vertical" aria-label="fuzzy pets">
+          <button type="button" class="btn btn-primary">Bunny</button>
+          <button type="button" class="btn btn-primary active">Hamster</button>
+          <button type="button" class="btn btn-primary">Guinea Pig</button>
+        </div>
+      </div><!-- col -->
+    </div><!-- row -->
+  </section>
+
+  <section id="badges-progressbars">
+    <div class="row mt-4">
+      <div class="col-md-3">
+        <h2>Badges</h2>
+          <h4>This is a <span class="badge badge-default"> badge</span></h4>
+          <p>This is a <span class="badge badge-info">badge</span> too</p>
+          <p>Badge <span class="badge badge-danger badge-pill">pill</span></p>
+      </div><!-- col -->
+      <div class="col-md-9">
+        <h2>Progress Bars</h2>
+            <div class="progress mb-3">
+              <div class="progress-bar w-25"
+              role="progressbar" aria-value-now="73%" aria-value-min="0" aria-value-max="100%"></div> <!-- w class less useful, use style attribute as below -->
+            </div>
+            <div class="progress mb-3">
+              <div class="progress-bar" style="width: 73%;">73%</div>
+            </div>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-success progress-bar-striped" style="width: 85%;">striped</div>
+            </div>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 50%;">animated</div>
+            </div>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-info" style="width: 15%;">multiple values</div>
+              <div class="progress-bar bg-warning" style="width: 30%;"></div>
+              <div class="progress-bar bg-danger" style="width: 10%;"></div>
+              <div class="progress-bar bg-success" style="width: 20%;"></div>
+            </div>
+            <div class="progress mb-3">
+              <div class="progress-bar bg-danger" style="width: 73%;">73</div>
+            </div>
+      </section>
+
+      <section id="list-groups">
+        <!-- ROW -->
+        <div class="row mb-3 mt-4">
+          <div class="col-md-12">
+            <h2>List Groups</h2>
+            <p class="text-secondary">iOS / Android - mobile look and feel </p>
+          </div>
+        </div>
+        <!-- ROW -->
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Unordered List</h5>
+            <ul>
+              <li>active</li>
+              <li>list-group-item-action // hover style</li>
+              <li>disabled</li>
+              <li>item</li>
+              <li>item</li>
+            </ul>
+          </div><!-- col -->
+          <div class="col-md-6">
+            <ul class="list-group mb-3">
+              <li class="list-group-item list-group-item-action active">active</li>
+              <li class="list-group-item list-group-item-action">list-group-item-action // hover style</li>
+              <li class="list-group-item disabled">disabled</li>
+              <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">item<span class="badge badge-primary badge-pill">12</span></li>
+              <li class="list-group-item list-group-item-action">item</li>
+            </ul>
+          </div><!-- col -->
+        </div><!-- row -->
+        <!-- ROW -->
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Anchor Tags</h5>
+            <div class="mb-3">
+              <a href="#">these</a>
+              <a href="#">are</a>
+              <a href="#">anchor</a>
+              <a href="#">tags</a>
+              <a href="#">(links!)</a>
+            </div>
+          </div><!-- col -->
+          <div class="col-md-6">
+            <div class="mb-3">
+              <a class="list-group-item list-group-item-action active" href="#">these</a>
+              <a class="list-group-item list-group-item-action list-group-item-success" href="#">are</a>
+              <a class="list-group-item list-group-item-action list-group-item-info" href="#">anchor</a>
+              <a class="list-group-item list-group-item-action list-group-item-warning" href="#">tags</a>
+              <a class="list-group-item list-group-item-action list-group-item-danger" href="#">(links!)</a>
+            </div>
+          </div><!-- col -->
+        </div><!-- row -->
+        <!-- ROW -->
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Buttons:</h5>
+            <div class="mb-3">
+              <button type="button">Grooming </button>
+              <button type="button">General Health</button>
+              <button type="button">Nutrition</button>
+              <button type="button">Pest Control</button>
+              <button type="button">Vaccinations</button>
+            </div>
+          </div><!-- col -->
+          <div class="col-md-6">
+            <div class="list-group mb-3">
+              <button class="list-group-item list-group-item-action active" type="button">Grooming </button>
+              <button class="list-group-item list-group-item-action" type="button">General Health</button>
+              <button class="list-group-item list-group-item-action" type="button">Nutrition</button>
+              <button class="list-group-item list-group-item-action" type="button">Pest Control</button>
+              <button class="list-group-item list-group-item-action" type="button">Vaccinations</button>
+            </div>
+          </div><!-- col -->
+        </div><!-- row -->
+  </section>
+
+  <section id="breadcrumbs" style="margin-top: 80px">
+    <!-- works with lists too -->
+    <!-- using style tag to customize "/" as ">" -->
+    <nav class="breadcrumb mt-4">
+      <a class="breadcrumb-item" href ="#">Home</a>
+      <a class="breadcrumb-item" href ="#">Pets</a>
+      <a class="breadcrumb-item active" href ="#">Nutrition</a>
+    </nav>
+  </section>
+
+<!-- jumbotron could be in a header -->
+<!-- can mess w this being within or outside container -->
+<!-- by default has rounded corners; fluid version does not have rounded corners -->
+  <section id="layout components">
+    <!-- <div class="jumbotron" style="background: url(images/arches-national-park-dark-dusk-33688.jpg); background-size:cover;"> -->
+    <div class="jumbotron">
+      <div class="display-2 mb-4">Jumbotron</div>
+      <p class="lead">Aute pariatur elit deserunt occaecat duis nisi dolore duis id dolor. Irure nostrud aute et sint officia enim Lorem amet ex incididunt aliquip elit aute cillum et ut et. Culpa ad elit non ut ad id veniam non velit ut culpa. Ad deserunt laboris anim consectetur consectetur dolor voluptate proident sit veniam id nisi incididunt mollit.</p>
+    </div>
+  </section>
+
+  <section id="table">
+    <h2>Tables</h2>
+    <table class="table table-hover table-bordered table-sm table-responsive-md">
+      <thead class="thead-light"><tr><th scope="col">Item #</th><th scope="col">Product or Service</th><th scope="col">Price (ea.)</th><th scope="col">Retail Price (Case)</th><th scope="col">Case Discount</th><th scope="col">Wholesale Price</th><th scope="col">Wholesale Discount</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">100050</th><td>Advance Pet Oral Care Toothbrush and Toothpaste</td><td>$9.55 </td><td>$108.87</td><td>$5.73</td><td>$103.14</td><td>$11.46</td></tr>
+        <tr class="table-primary"><th scope="row">100043</th><td>Basic Teeth Cleaning and Exam</td><td>$100.00 </td><td>$1,140.00</td><td>$60.00</td><td>$1,080.00</td><td>$120.00</td></tr>
+        <tr><th scope="row">100013</th><td class="table-success">Calm Cat Anxiety Relief Spray</td><td>$9.49 </td><td>$108.19</td><td>$5.69</td><td>$102.49</td><td>$11.39</td></tr>
+        <tr class="bg-danger text-light"><th scope="row">100041</th><td>Cat Hairball Remedy Gel</td><td>$6.00 </td><td>$68.40</td><td>$3.60</td><td>$64.80</td><td>$7.20</td></tr>
+        <tr><th scope="row">100051</th><td>Cat Vaccination Package</td><td>$55.00 </td><td>$627.00</td><td>$33.00</td><td>$594.00</td><td>$66.00</td></tr>
+        <tr><th scope="row">100046</th><td>Dog Vaccination Package</td><td>$65.00 </td><td>$741.00</td><td>$39.00</td><td>$702.00</td><td>$78.00</td></tr>
+        <tr><th scope="row">100044</th><td>Healthy Coat Dog Supplement</td><td>$6.44 </td><td>$73.42</td><td>$3.86</td><td>$69.55</td><td>$7.73</td></tr>
+        <tr><th scope="row">100030</th><td>Healthy Coat Dog Supplement</td><td>$9.56 </td><td>$108.98</td><td>$5.74</td><td>$103.25</td><td>$11.47</td></tr>
+        <tr><th scope="row">100045</th><td>Here Kitty Kitty Organic Catnip</td><td>$7.75 </td><td>$88.35</td><td>$4.65</td><td>$83.70</td><td>$9.30</td></tr>
+        <tr><th scope="row">100053</th><td>Kidney Support Liquid Dietary Supplement</td><td>$9.12 </td><td>$103.97</td><td>$5.47</td><td>$98.50</td><td>$10.94</td></tr>
+      </tbody>
+    </table>
+
+    <table class="table table-dark table-striped table-responsive mb-3">
+      <thead><tr><th scope="col">Item #</th><th scope="col">Product or Service</th><th scope="col">Price (ea.)</th><th scope="col">Retail Price (Case)</th><th scope="col">Case Discount</th><th scope="col">Wholesale Price</th><th scope="col">Wholesale Discount</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">100040</th><td>Large Hypoallergenic Pet Bowl</td><td>$8.14 </td><td>$92.80</td><td>$4.88</td><td>$87.91</td><td>$9.77</td></tr>
+        <tr><th scope="row">100005</th><td>Medicated Dog Shampoo</td><td>$8.73 </td><td>$99.52</td><td>$5.24</td><td>$94.28</td><td>$10.48</td></tr>
+        <tr><th scope="row">100039</th><td>Microchip Service</td><td>$15.00 </td><td>$171.00</td><td>$9.00</td><td>$162.00</td><td>$18.00</td></tr>
+        <tr><th scope="row">100054</th><td>Parasite Treatment Package</td><td>$75.00 </td><td>$855.00</td><td>$45.00</td><td>$810.00</td><td>$90.00</td></tr>
+        <tr><th scope="row">100059</th><td>Probiotic Cat Treats</td><td>$7.89 </td><td>$89.95</td><td>$4.73</td><td>$85.21</td><td>$9.47</td></tr>
+        <tr><th scope="row">100042</th><td>Probiotic Dog Treats</td><td>$8.89 </td><td>$101.35</td><td>$5.33</td><td>$96.01</td><td>$10.67</td></tr>
+        <tr><th scope="row">100009</th><td>Rabies 1 or 3 year Vaccination</td><td>$18.00 </td><td>$205.20</td><td>$10.80</td><td>$194.40</td><td>$21.60</td></tr>
+        <tr><th scope="row">100055</th><td>Senior Dog Vitamin Chews</td><td>$9.66 </td><td>$110.12</td><td>$5.80</td><td>$104.33</td><td>$11.59</td></tr>
+        <tr><th scope="row">100032</th><td>Small Hypoallergenic Pet Bowl</td><td>$6.55 </td><td>$74.67</td><td>$3.93</td><td>$70.74</td><td>$7.86</td></tr>
+        <tr><th scope="row">100021</th><td>Strong Joints Cat Supplement</td><td>$5.53 </td><td>$63.04</td><td>$3.32</td><td>$59.72</td><td>$6.64</td></tr>
+        <tr><th scope="row">100047</th><td>Strong Joints Dog Supplement</td><td>$5.87 </td><td>$66.92</td><td>$3.52</td><td>$63.40</td><td>$7.04</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="cards" style="margin-top: 80px">
+    <h2 class="pt-3">Cards</h2>
+
+    <!-- for card layouts, can just use regular rows and columns too -->
+    <h3>Card Deck</h3>
+    <div class="card-deck">
+
+      <section class="card mb-5" id="drwinthrop">
+        <img class="card-img-top card-img img-fluid" src="images/ball-holding-macro-1310847.jpg" alt="Doctor Winthrop Photo">
+        <div class="card-header">
+          <h2 class="card-title">Ash Ketchum</h2>
+          <h5 class="card-subtitle">Pokemon Trainer</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Cillum est adipisicing excepteur occaecat et consequat quis esse mollit ad anim est excepteur cillum. Veniam consequat qui in occaecat enim ad dolor do duis velit. Labore fugiat nulla nisi labore eu do sit tempor proident commodo amet excepteur cupidatat reprehenderit. Est ad eiusmod velit enim cillum exercitation anim in dolor enim est id consectetur ullamco culpa voluptate. Enim anim nisi sunt velit proident occaecat irure excepteur ea occaecat nisi deserunt adipisicing consectetur mollit.</p>
+        </div>
+        <div class="card-footer">
+          <div class="list-group">
+          <a class="list-group-item" href="#">About Me</a>
+          <a class="list-group-item" href="#">My Pets</a>
+          <a class="list-group-item" href="#">Client Slideshow</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card mb-5 bg-warning" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Pikachu</h2>
+        <h5 class="card-subtitle">Electric Rat</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Est excepteur amet est minim exercitation mollit non ipsum magna exercitation do voluptate culpa dolor. Fugiat nulla est aute cupidatat esse aliqua nostrud ullamco. Commodo quis do quis cupidatat labore occaecat amet id nisi dolore anim cillum velit qui cupidatat incididunt ut.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link" href="#">About Me</a>
+          <a class="card-link" href="#">My Pets</a>
+          <a class="card-link" href="#">Client Slideshow</a>
+        </div>
+        <img class="card-img-bottom img-fluid" src="images/melvina-mak-704345-unsplash.jpg" alt="Doctor Winthrop Photo">
+      </section>
+
+    </div>
+    <!-- card deck -->
+
+    <h3>Card Group</h3>
+    <div class="card-group">
+
+      <section class="card mb-5 bg-primary text-light" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Squirtle</h2>
+        <h5 class="card-subtitle">Cool Turtle</h5>
+        </div>
+        <div class="card-body">
+          <img class="card-img img-fluid" src="images/jcob-nasyr-765785-unsplash.jpg" alt="Doctor Winthrop Photo">
+          <p class="card-text">Laboris Lorem fugiat eu aliqua voluptate cupidatat et anim. Sunt laboris ex qui et excepteur occaecat amet. Labore ad aliqua ex et anim commodo ipsum enim elit reprehenderit minim elit veniam consectetur. Duis sunt nostrud duis veniam nostrud ea enim occaecat minim aliqua nisi culpa ut commodo ex aliqua incididunt.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link text-light" href="#">About Me</a>
+          <a class="card-link text-light" href="#">My Pets</a>
+          <a class="card-link text-light" href="#">Client Slideshow</a>
+        </div>
+      </section>
+
+      <section class="card mb-5 bg-success text-light" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Bulbasaur</h2>
+        <h5 class="card-subtitle">Cute Plant Boy</h5>
+        </div>
+        <div class="card-body">
+          <img class="card-img img-fluid" src="images/adorable-animal-beagle-977267.jpg" alt="Doctor Winthrop Photo">
+          <p class="card-text">Pariatur laboris ea eu laborum do commodo ad. Cupidatat ullamco enim consequat ea ut aliqua qui aliquip ullamco. Occaecat ut adipisicing minim laboris cupidatat aliqua aliquip proident ipsum adipisicing minim fugiat et irure proident enim. Officia reprehenderit est fugiat mollit magna qui consequat qui aliquip cillum non dolor.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link text-light" href="#">About Me</a>
+          <a class="card-link text-light" href="#">My Pets</a>
+          <a class="card-link text-light" href="#">Client Slideshow</a>
+        </div>
+      </section>
+
+      <section class="card mb-5 bg-danger text-light" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Charmander</h2>
+        <h5 class="card-subtitle">Little Shit</h5>
+        </div>
+        <div class="card-body">
+          <img class="card-img img-fluid" src="images/action-active-ash-417070.jpg" alt="Doctor Winthrop Photo">
+          <p class="card-text">Magna laborum ad culpa proident labore exercitation incididunt magna enim aute aute aliqua id proident adipisicing enim ex. Occaecat incididunt cillum eiusmod ea incididunt veniam laboris nostrud mollit nisi aliquip exercitation pariatur laborum adipisicing ex tempor. Ad irure occaecat sint consequat veniam irure est proident ullamco proident consequat. Reprehenderit nostrud culpa aliqua enim voluptate et eiusmod do reprehenderit laboris cupidatat laboris labore anim sit.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link text-light" href="#">About Me</a>
+          <a class="card-link text-light" href="#">My Pets</a>
+          <a class="card-link text-light" href="#">Client Slideshow</a>
+        </div>
+      </section>
+
+    </div>
+    <!-- card group -->
+
+    <h3>Card Columns</h3>
+    <div class="card-columns">
+      <section class="card mb-5 border-danger text-white" id="drwinthrop">
+        <img class="card-img img-fluid" src="images/action-animation-attraction-1049622.jpg" alt="Doctor Winthrop Photo">
+        <div class="card-img-overlay">
+          <h2 class="card-title">Pokemon</h2>
+          <h5 class="card-subtitle">You know they eat them</h5>
+          <p class="card-text">Veniam anim aute exercitation veniam nisi sit mollit irure proident. Fugiat enim occaecat et veniam amet labore consectetur excepteur officia deserunt. Tempor Lorem do est eiusmod eiusmod aute dolore ullamco velit laborum laboris est do est qui.</p>
+        </div>
+        <div class="list-group list-group-flush">
+          <a class="list-group-item" href="#">About Me</a>
+          <a class="list-group-item" href="#">My Pets</a>
+          <a class="list-group-item" href="#">Client Slideshow</a>
+        </div>
+      </section>
+      <section class="card mb-5" id="drwinthrop">
+        <img class="card-img-top card-img img-fluid" src="images/ball-holding-macro-1310847.jpg" alt="Doctor Winthrop Photo">
+        <div class="card-header">
+          <h2 class="card-title">Ash Ketchum</h2>
+          <h5 class="card-subtitle">Pokemon Trainer</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Cillum est adipisicing excepteur occaecat et consequat quis esse mollit ad anim est excepteur cillum. Veniam consequat qui in occaecat enim ad dolor do duis velit. Labore fugiat nulla nisi labore eu do sit tempor proident commodo amet excepteur cupidatat reprehenderit. Est ad eiusmod velit enim cillum exercitation anim in dolor enim est id consectetur ullamco culpa voluptate. Enim anim nisi sunt velit proident occaecat irure excepteur ea occaecat nisi deserunt adipisicing consectetur mollit.</p>
+        </div>
+        <div class="card-footer">
+          <div class="list-group">
+          <a class="list-group-item" href="#">About Me</a>
+          <a class="list-group-item" href="#">My Pets</a>
+          <a class="list-group-item" href="#">Client Slideshow</a>
+          </div>
+        </div>
+      </section>
+      <section class="card mb-5 bg-warning" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Pikachu</h2>
+        <h5 class="card-subtitle">Electric Rat</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Est excepteur amet est minim exercitation mollit non ipsum magna exercitation do voluptate culpa dolor. Fugiat nulla est aute cupidatat esse aliqua nostrud ullamco. Commodo quis do quis cupidatat labore occaecat amet id nisi dolore anim cillum velit qui cupidatat incididunt ut.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link" href="#">About Me</a>
+          <a class="card-link" href="#">My Pets</a>
+          <a class="card-link" href="#">Client Slideshow</a>
+        </div>
+        <img class="card-img-bottom img-fluid" src="images/melvina-mak-704345-unsplash.jpg" alt="Doctor Winthrop Photo">
+      </section>
+      <section class="card mb-5 bg-primary text-light" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Squirtle</h2>
+        <h5 class="card-subtitle">Cool Turtle</h5>
+        </div>
+        <div class="card-body">
+          <img class="card-img img-fluid" src="images/jcob-nasyr-765785-unsplash.jpg" alt="Doctor Winthrop Photo">
+          <p class="card-text">Laboris Lorem fugiat eu aliqua voluptate cupidatat et anim. Sunt laboris ex qui et excepteur occaecat amet. Labore ad aliqua ex et anim commodo ipsum enim elit reprehenderit minim elit veniam consectetur. Duis sunt nostrud duis veniam nostrud ea enim occaecat minim aliqua nisi culpa ut commodo ex aliqua incididunt.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link text-light" href="#">About Me</a>
+          <a class="card-link text-light" href="#">My Pets</a>
+          <a class="card-link text-light" href="#">Client Slideshow</a>
+        </div>
+      </section>
+      <section class="card mb-5 bg-success text-light" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Bulbasaur</h2>
+        <h5 class="card-subtitle">Cute Plant Boy</h5>
+        </div>
+        <div class="card-body">
+          <img class="card-img img-fluid" src="images/adorable-animal-beagle-977267.jpg" alt="Doctor Winthrop Photo">
+          <p class="card-text">Pariatur laboris ea eu laborum do commodo ad. Cupidatat ullamco enim consequat ea ut aliqua qui aliquip ullamco. Occaecat ut adipisicing minim laboris cupidatat aliqua aliquip proident ipsum adipisicing minim fugiat et irure proident enim. Officia reprehenderit est fugiat mollit magna qui consequat qui aliquip cillum non dolor.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link text-light" href="#">About Me</a>
+          <a class="card-link text-light" href="#">My Pets</a>
+          <a class="card-link text-light" href="#">Client Slideshow</a>
+        </div>
+      </section>
+      <section class="card mb-5 bg-danger text-light" id="drwinthrop">
+        <div class="card-header">
+        <h2 class="card-title">Charmander</h2>
+        <h5 class="card-subtitle">Little Shit</h5>
+        </div>
+        <div class="card-body">
+          <img class="card-img img-fluid" src="images/action-active-ash-417070.jpg" alt="Doctor Winthrop Photo">
+          <p class="card-text">Magna laborum ad culpa proident labore exercitation incididunt magna enim aute aute aliqua id proident adipisicing enim ex. Occaecat incididunt cillum eiusmod ea incididunt veniam laboris nostrud mollit nisi aliquip exercitation pariatur laborum adipisicing ex tempor. Ad irure occaecat sint consequat veniam irure est proident ullamco proident consequat. Reprehenderit nostrud culpa aliqua enim voluptate et eiusmod do reprehenderit laboris cupidatat laboris labore anim sit.</p>
+        </div>
+        <div class="card-footer">
+          <a class="card-link text-light" href="#">About Me</a>
+          <a class="card-link text-light" href="#">My Pets</a>
+          <a class="card-link text-light" href="#">Client Slideshow</a>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section id="media-objects" style="margin-top: 80px">
+    <section class="media mb-4" id="drwinthrop">
+      <!-- w-25 w-50 etc or regular style attribute -->
+      <img class="d-flex align-self-center mr-3 img-fluid rounded w-50"  src="images/arches-national-park-dark-dusk-33688.jpg" alt="Doctor Winthrop Photo">
+      <div class="media-body">
+        <h2>Media Object</h2>
+        <h5>Text and Images</h5>
+        <p>Reprehenderit qui ullamco adipisicing dolore excepteur exercitation mollit cillum reprehenderit reprehenderit qui incididunt nostrud sint cupidatat. Exercitation esse excepteur laborum incididunt occaecat sunt dolor id voluptate ea et ad excepteur exercitation. Consequat occaecat elit exercitation minim proident anim duis duis ullamco et aliqua laboris cillum non velit qui. Laboris ullamco culpa est aliqua elit proident fugiat do do culpa nostrud laborum voluptate labore sunt.</p>
+      </div>
+    </section>
+    <section class="media mb-4" id="drwinthrop">
+      <div class="media-body">
+        <h2>Media Object</h2>
+        <h5>Text and Images</h5>
+        <p>Reprehenderit qui ullamco adipisicing dolore excepteur exercitation mollit cillum reprehenderit reprehenderit qui incididunt nostrud sint cupidatat. Exercitation esse excepteur laborum incididunt occaecat sunt dolor id voluptate ea et ad excepteur exercitation. Consequat occaecat elit exercitation minim proident anim duis duis ullamco et aliqua laboris cillum non velit qui. Laboris ullamco culpa est aliqua elit proident fugiat do do culpa nostrud laborum voluptate labore sunt.</p>
+      </div>
+      <img class="d-flex align-self-center ml-3 img-fluid rounded w-25"  src="images/astronomy-cosmos-dark-733475.jpg" alt="Doctor Winthrop Photo">
+    </section>
+  </section>
+
+  <section id="form">
+
+    <h2>Form</h2>
+    <form>
+
+      <fieldset class="form-group">
+
+        <legend>Owner Info</legend>
+
+<!-- note - can hide label w sr-only class, only visible to screen readers, but keep ur labels -->
+        <div class="form-group row">
+          <label class="form-control-label col-form-label text-md-right col-md-2" for="ownername">Owner name</label>
+          <div class = "col-md-10">
+            <input class="form-control form-control-sm" type="text" id="ownername" placeholder="Your Name">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="form-control-label col-form-label text-md-right col-md-2" for="owneremail">Address</label>
+          <div class = "col-md-10">
+            <input class="form-control"
+              type="text" id="owneremail" placeholder="Address">
+          </div>
+        </div><!-- form-group -->
+
+<!-- form-row instead of row, row gives 60px padding by default which is too much for forms -->
+        <div class="form-group form-row">
+          <!-- could use col-auto too -->
+          <div class="form-group offset-md-2 col">
+            <label class="form-control-label col-form-label text-md-right col-md-2 sr-only" for="ownercity">City</label>
+            <input class="form-control"
+              type="text" id="ownercity" placeholder="City">
+          </div><!-- form-group -->
+
+          <div class="form-group col">
+            <label class="form-control-label col-form-label text-md-right col-md-2 sr-only" for="ownerzip">Zip</label>
+            <input class="form-control"
+              type="text" id="ownerzip" placeholder="Zip">
+          </div><!-- form-group -->
+        </div><!-- form-group -->
+
+<!-- has-success, has-warning, etc -->
+        <div class="form-group row has-danger form-inline">
+          <label class="form-control-label col-form-label text-md-right col-md-2" for="owneremail">Email address</label>
+          <div class = "col-md-10">
+            <input class="form-control mx-sm-2 form-control-danger" type="email" id="owneremail" aria-describedby="emailHelp" placeholder="Enter email">
+            <small class="form-text mx-sm-2 text-muted" id="emailHelp">We'll never share your email</small>
+          </div>
+        </div>
+      </fieldset>
+<!--
+      <div class="form-group row">
+        <div class="offset-md-2 col-auto">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </div> -->
+
+      <fieldset class="form-group">
+        <legend>Pet Info</legend>
+        <div>
+          <label class="form-control-label" for="petname">Pet name</label>
+          <input class="form-control form-control-lg" type="text" id="petname" placeholder="Your Pet's name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" for="pettype">Pet type</label>
+          <select class="form-control" id="pettype">
+            <option>Choose</option>
+            <option value="cat">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" for="reasonforvisit">Reason for today's visit</label>
+          <textarea class="form-control" id="reasonforvisit" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" for="donationamt">Donation Amount</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox" id="confirm-donation" checked aria-label="checkbox to confirm donation">
+              </div>
+            </div>
+              <div class="input-group-prepend">
+                <div class="input-group-text">$</div>
+              </div>
+              <input type="text" class="form-control" id="donationamt" placeholder="Amount">
+              <div class="input-group-append">
+                <div class="input-group-text">.00</div>
+              </div>
+          </div>
+        </div><!-- form-group -->
+
+      </fieldset>
+
+      <fieldset class="form-group">
+
+        <legend>Pet Medical Data</legend>
+
+        <div class="form-group">
+          <label class="d-block">Has your pet been spayed or neutered?</label>
+
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="spayneut" value="yes" checked> Yes
+            </label>
+          </div><!-- form-check -->
+
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="spayneut" value="no"> No
+            </label>
+          </div><!-- form-check -->
+
+        </div><!-- form-group -->
+
+        <div class="form-group">
+          <label>Has the pet had any of the following in the past 30 days</label>
+
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Abdominal pain
+            </label>
+          </div><!-- form-check -->
+
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Lack of appetite
+            </label>
+          </div><!-- form-check -->
+
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Weakness
+            </label>
+          </div><!-- form-check -->
+        </div><!-- form-group -->
+
+      </fieldset><!-- form-group -->
+
+          <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+  </section>
+
+  <section id="tooltips-popovers" class="pt-3" style="margin-top: 80px">
+    <h2>Tooltips</h2>
+    <p class="lead"><a href="#" data-toggle="tooltip" data-placement="top" title="Irure cupidatat veniam aliquip consequat sint proident quis nostrud reprehenderit est sit incididunt consectetur.">Hover</a> proident ad Lorem tempor commodo fugiat laboris anim commodo laborum ipsum minim irure ipsum ut. Amet irure sint veniam aute dolor nisi enim magna officia aliquip in mollit occaecat do quis ex. Excepteur non est tempor duis dolore nulla adipisicing amet id adipisicing fugiat sunt elit esse officia. Anim ullamco ex ea commodo excepteur cillum enim.</p>
+    <p><a href="#" data-toggle="tooltip" data-placement="left" data-trigger="click" data-html="true" title="Et reprehenderit adipisicing nisi officia in quis pariatur cupidatat nulla ad Lorem commodo ipsum fugiat adipisicing.">Click</a> sit nisi commodo laborum officia reprehenderit ipsum consectetur non ullamco deserunt amet ea elit exercitation consectetur proident. Enim in nisi ex ea laboris do cupidatat adipisicing adipisicing elit amet nisi exercitation reprehenderit. Non pariatur et mollit ut ea voluptate nostrud elit anim id proident nulla ut. Excepteur sit proident deserunt magna ea officia laborum exercitation anim sit labore commodo magna nisi do Lorem mollit.</p>
+
+    <h2>Popovers</h2>
+    <button type="button" class="btn btn-info" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="pop title" data-content="Laboris aute tempor mollit enim cupidatat incididunt tempor dolor Lorem adipisicing.">
+      Pop This
+    </button>
+  </section>
+
+  <section id="alert" class="pt-3">
+    <div class="alert alert-info alert-dismissable fade show">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        <!-- aria-hidden hides from screen readers -->
+      </button>
+      <h2>Alerts</h2>
+      <p class="mb-2">Deserunt consequat ipsum veniam ipsum reprehenderit anim adipisicing dolore nostrud ea. Culpa ut id culpa qui velit sint eiusmod adipisicing dolor velit officia veniam pariatur duis do occaecat. Lorem fugiat fugiat cillum nostrud exercitation consectetur anim occaecat commodo elit sint ad.</p>
+      <a class="alert-link" href="#">More Info</a>
+    </div>
+  </section>
+
+  <section id="dropdown">
+    <h2>Dropdown</h2>
+    <div class="row">
+      <div class="col">
+      <!-- <div class="dropdown"> -->
+        <div class="btn-group mb-3">
+          <button type="button" class="btn btn-primary">Dropdown</button>
+          <button class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+        </div>
+      <!-- possible to align dropdown-menu-right -->
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-header">Service Options</div>
+            <!-- dropdown items could be a tags or buttons -->
+            <button class="dropdown-item btn">Grooming</button>
+            <a class="dropdown-item" href="#">General Health</a>
+            <a class="dropdown-item" href="#">Nutrition</a>
+            <a class="dropdown-item" href="#">Pest Control</a>
+            <a class="dropdown-item" href="#">Vaccinations</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Other</a>
+        </div>
+
+      </div><!-- col -->
+
+      <div class="col">
+        <div class="dropup mb-3">
+          <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropup</button>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <!-- dropdown items could be a tags or buttons -->
+            <button class="dropdown-item btn">Grooming</button>
+            <a class="dropdown-item" href="#">General Health</a>
+            <a class="dropdown-item" href="#">Nutrition</a>
+            <a class="dropdown-item" href="#">Pest Control</a>
+            <a class="dropdown-item" href="#">Vaccinations</a>
+          </div>
+        </div>
+      </div><!-- col -->
+    </div><!-- row   -->
+  </section>
+
+  <section id="collapse-accordions">
+    <h2>Collapse Accordions</h2>
+    <p class="lead">Note:</p> <p>When one card is open, the others should collapse, but this isn't working. See 08_06 - I think tether.min.js and scripts.js are dependencies that are missing.</p>
+
+
+    <!-- if we used anchor tag instead of button, use href instead of data-target -->
+    <button class="btn btn-primary mb-3" data-toggle="collapse" data-target="#pestcontrol" aria-expanded="link to pest control">
+      Collapse Accordions
+    </button>
+    <div id="pestcontrol" class="collapse mb-3">
+      We offer the latest advances in safe and effective prevention and treatment of fleas, ticks, worms, heart worm, and other parasites.
+    </div>
+
+    <div id="servicesaccordion" role="tablist" aria-multiselectable="true">
+    <!-- CARD -->
+      <div class="card">
+
+        <div class="card-header" role="tab" id="groomingheading">
+          <h5 class="mb-0"><a data-toggle="collapse" data-parent="#servicesaccordion" href="#grooming" aria-expanded="true" aria-controls="grooming">Grooming</a></h5>
+        </div><!-- card header -->
+
+        <div id="grooming" class="collapse show" role="tabpanel" aria-labelledby="groomingheading">
+          <div class="card-block">
+            <p>Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.</p>
+          </div>
+        </div><!-- collapse -->
+
+      </div><!-- card -->
+    <!-- CARD -->
+      <div class="card">
+
+        <div class="card-header" role="tab" id="generalhealthheading">
+          <h5 class="mb-0"><a data-toggle="collapse" data-parent="#servicesaccordion" aria-expanded="true" aria-controls="grooming" href="#generalhealth">General Health</a></h5>
+        </div><!-- card header -->
+
+        <div id="generalhealth" class="collapse show" role="tabpanel" aria-labelledby="groomingheading">
+          <div class="card-block">
+            <p>Wellness and senior exams, ultrasound, x-ray, and dental cleanings are just a few of our general health services.</p>
+          </div>
+        </div><!-- card collapse -->
+    <!-- CARD -->
+      </div><!-- card -->
+
+      <div class="card">
+
+        <div class="card-header" role="tab" id="nutritionheading">
+          <h5 class="mb-0"><a data-toggle="collapse" data-parent="#servicesaccordion" aria-expanded="true" aria-controls="grooming" href="#nutrition">Nutrition</a></h5>
+        </div><!-- card header -->
+
+        <div id="nutrition" class="collapse show" role="tabpanel" aria-labelledby="groomingheading">
+          <div class="card-block">
+            <p>Let our nutrition experts review your pet's diet and prescribe a custom nutrition plan for optimum health and disease prevention.</p>
+          </div>
+        </div><!-- collapse -->
+
+      </div><!-- card -->
+    </div>
+  </section>
+
+  <section id="modals">
+    <h2>Modals</h2>
+    <p class="lead">Note:</p>
+    <p>This isn't working either.</p>
+    <!-- works on links (a tags) too -->
+    <!-- <a class="mt-4" data-toggle="modal" href="#servicesmodal">More Info</a> -->
+    <button type="button" class="btn btn-primary mt-4" data-toggle="modal" data-target="#servicesmodal">More Info</button>
+
+    <div class="modal fade" id="servicesmodal">
+      <div class="modal dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Pest Control</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>We offer the latest advances in safe and effective prevention and treatment of fleas, ticks, worms, heart worm, and other parasites.</p>
+          </div>
+          <div class="modal-footer">
+            <!-- traditionally a button, could be text -->
+            <button class="btn btn-secondary" data-dismiss="modal">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="carousel">
+    <h2>Carousel</h2>
+    <p class="lead">Note:</p>
+    <p>Clicking left and right buttons doesn't work for some reason but arrow keys do!</p>
+
+    <!-- every carousel should have an id -->
+    <!-- be careful not to have 2 things active -->
+    <!-- MUST pre-size your images properly -->
+    <div class="carousel slide" id=:featured data-ride="carousel">
+      <div class="carousel-inner">
+
+        <ol class="carousel-indicators">
+          <li data-target="#featured" data-slide-to="0" class="active"></li>
+          <li data-target="#featured" data-slide-to="1"></li>
+          <li data-target="#featured" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-item active">
+          <img class="img-fluid" src="images/benjamin-hung-340384-unsplash.jpg" alt="Lifestyle Photo">
+        </div><!-- carousel item-->
+        <div class="carousel-item">
+          <img class="img-fluid" src="images/astronomy-cosmos-dark-733475.jpg" alt="Mission">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Pete, <small>owner of McAllister</small></h3>
+            <p>"Wisdom Pet Medicine is the only clinic around that will even book pet fish for appointments."</p>
+          </div><!-- caption -->
+        </div><!-- carousel item-->
+        <div class="carousel-item">
+          <img class="img-fluid" src="images/galaxy-infinity-milky-way-110854.jpg" alt="Vaccinations">
+        </div><!-- carousel item-->
+
+        <!-- left button -->
+        <a class="carousel-control-prev" href="#featured" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true">
+            <span class="sr-only">Previous</span>
+          </span>
+        </a>
+        <!-- right button -->
+        <a class="carousel-control-next" href="#featured" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true">
+            <span class="sr-only">Next</span>
+          </span>
+        </a>
+      </div><!-- carousel inner -->
+    </div><!-- carousel -->
+  </section>
+
+</div><!-- container -->
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="js/jquery.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+  $(function() {
+    var topoffset = 80; //variable for menu height
+
+    $('[data-toggle="tooltip"]').tooltip();
+      // {
+      // placement: 'top',
+      // html: true;
+    // });
+    $('[data-toggle="popover"]').popover({
+      //configuration object
+      // placement: "top"
+      //could achieve smae thing w data-placement attribute
+    });
+
+    //Use smooth scrolling when clicking on navigation
+    $('.navbar-nav a').click(function() {
+      if (location.pathname.replace(/^\//,'') ===
+        this.pathname.replace(/^\//,'') &&
+        location.hostname === this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top-topoffset
+          }, 500);
+          return false;
+        } //target.length
+      } //click function
+    }); //smooth scrolling
+
+  });
+</script>
+
+</body>
+</html>
