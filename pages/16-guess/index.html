@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- the MAIN.CSS file is linked here -->
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=K2D|Montserrat|Arapey" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="content-wrap">
+      <h1>Guessing Game</h1>
+      <div class='hr'></div>
+      <h3>guess a number between 1-100</h3>
+      <input id="userInput" type="text" placeholder="feed me a number">
+      <button id="userInputBtn" type="button">GO</button>
+      <h4>previous guesses:</h4>
+      <div class="guessbox" id="guess1">_</div>
+      <div class="guessbox" id="guess2">_</div>
+      <div class="guessbox" id="guess3">_</div>
+      <div class="guessbox" id="guess4">_</div>
+      <div class="guessbox" id="guess5">_</div>
+
+      <div id='message'></div>
+
+      <div class='resetti'>
+      <button id="reset" type="button">reset</button>
+      <button id="hintBtn" type="button">hint</button>
+      </div>
+
+      <div id='hint'></div>
+
+    </div>
+
+
+
+
+    <script src='js/guessing-game.js'></script>
+    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+  </body>
+
+</html>
