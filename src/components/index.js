@@ -1,0 +1,5 @@
+export {Navbar} from './Navbar'
+export {Header} from './Header'
+export {About} from './About'
+export {Projects} from './Projects'
+export {Footer} from './Footer'
