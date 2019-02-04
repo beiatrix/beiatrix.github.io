@@ -6,6 +6,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* ================================================== */}
+        <div className="App-header">
+          <h1>UNDER CONSTRUCTION :)</h1>
+        </div>
+        {/* ================================================== */}
         <Navbar />
         <header>
           <Header />
