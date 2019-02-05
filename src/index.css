@@ -134,7 +134,80 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+a {
+	color: var(--darkgray);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--lavender);
+	background: var(--lightgray);
+}
+
+a:visited {
+	text-decoration: none;
+}
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+/*
+ * ==================== NAVBAR ====================
+*/
+
+#navbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: sticky;
+	overflow: hidden;
+	background: white;
+}
+
+#navbar a {
+	font-weight: 600;
+	display: inline-block;
+	text-align: center;
+	padding: 1rem;
+	margin: 0.5rem;
+}
+
+#navbar a:hover {
+	border: none;
+	border-radius: 5px;
+}
+
+#logo {
+	height: 54px;
+	width: auto;
+	object-fit: contain;
+}
+
+.active {
+	background-color: #4caf50;
+	color: white;
+}
+
+#navbar .icon {
+	display: none;
+}
+
+/*
+ * ==================== MEDIA QUERIES ====================
+*/
+
+/* desktop */
+@media screen and (max-width: 600px) {
+	#navbar {
+		height: 54px;
+	}
+}
+
+/* tablet */
+@media screen and (max-width: 600px) {
+	#navbar {
+		height: 54px;
+	}
 }

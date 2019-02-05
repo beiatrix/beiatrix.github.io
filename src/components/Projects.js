@@ -33,14 +33,14 @@ export const Projects = () => {
     {
       projects.map((project, idx) => {
         return (
-          <div key={`project-${idx}`}>
+          <section key={`project-${idx}`}>
             <img src="https://images.unsplash.com/photo-1502716197620-bf14ce1651b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80" alt={project.name} />
             <h1>{project.name}</h1>
             <h2>{project.subtitle}</h2>
             <div className="gradientBar" />
             <p><a href={project.url} target="_blank">{project.url}</a></p>
             <p>{project.desc}</p>
-          </div>
+          </section>
         )
       })
     }
