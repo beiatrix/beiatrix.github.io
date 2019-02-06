@@ -157,57 +157,42 @@ code {
  * ==================== NAVBAR ====================
 */
 
-#navbar {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: sticky;
-	overflow: hidden;
+nav {
+  box-shadow: 0 0 15px grey;
+}
+
+.navbar-collapse {
+	/* border: 3px solid purple; */
+	/* display: flex;
+	justify-content: center; */
+}
+
+nav a {
+	margin: 0 0.5rem 0 0.5rem;
+	padding: 1rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+nav a:hover {
+	color: var(--lavender) !important;
+	/* border: none; */
+	border-radius: 3px;
+}
+
+#logo:hover {
+	cursor: pointer;
 	background: white;
 }
 
-#navbar a {
-	font-weight: 600;
-	display: inline-block;
-	text-align: center;
-	padding: 1rem;
-	margin: 0.5rem;
+#logolink {
+	margin: 0.25rem 0 0.25rem 0.5rem;
+	padding: 0;
 }
 
-#navbar a:hover {
-	border: none;
-	border-radius: 5px;
-}
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+  }
 
-#logo {
-	height: 54px;
-	width: auto;
-	object-fit: contain;
-}
-
-.active {
-	background-color: #4caf50;
-	color: white;
-}
-
-#navbar .icon {
-	display: none;
-}
-
-/*
- * ==================== MEDIA QUERIES ====================
-*/
-
-/* desktop */
-@media screen and (max-width: 600px) {
-	#navbar {
-		height: 54px;
-	}
-}
-
-/* tablet */
-@media screen and (max-width: 600px) {
-	#navbar {
-		height: 54px;
-	}
-}
+  .navbar-default { border-color: transparent;} 

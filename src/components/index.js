@@ -1,4 +1,4 @@
-export {Navbar} from './Navbar'
+export {Appbar} from './Appbar'
 export {Header} from './Header'
 export {About} from './About'
 export {Projects} from './Projects'

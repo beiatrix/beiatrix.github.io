@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Navbar, Header, About, Projects, Footer} from './components'
+import {Appbar, Header, About, Projects, Footer} from './components'
 import './App.css';
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
           <h1>UNDER CONSTRUCTION :)</h1>
         </div> */}
         {/* ================================================== */}
-        <Navbar />
+        <Appbar />
         <header>
           <Header />
         </header>
