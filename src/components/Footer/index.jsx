@@ -9,13 +9,13 @@ export const Footer = () => {
 
       <h4>TECHNICAL SKILLS</h4>
       <div className="footer-gradient"></div>
-      <p>PROFICIENT | JavaScript, HTML5, CSS3, Node.js, Express, React, Redux, Axios, Sequelize, PostgreSQL, Git & Github, Bootstrap, Material-UI, Visual Studio Code, Chrome Dev Tools, Bash</p>
-      <p>FAMILIAR | SQL, SVG, Python, jQuery, D3, OAuth, Passport, Sockets, Stripe, Heroku, Webpack, Mocha, Chai, Test-Driven Development, Agile Development</p>
+      <p>PROFICIENT | JavaScript, TypeScript, React, GraphQL, Apollo, Node, Express, TypeORM, SQL, DataGrip, HTML5, CSS3, SASS, Redux, Jest, Sequelize, Postgres, Git & Github, Object-Oriented Programming, Functional Programming, Agile</p>
+      <p>FAMILIAR | AWS, Looker, Python, React Testing Library, TestRail, Storybook, Babel, Webpack, Bootstrap, Enzyme, Mocha, Chai, Circle CI, Travis CI, Heroku, Docker, OAuth, Passport, Sockets, Stripe</p>
       <br />
 
       <h4>CREATIVE SKILLS</h4>
       <div className="footer-gradient"></div>
-      <p>Adobe Creative Cloud (Photoshop, Illustrator, InDesign, AfterEffects), Figma, Final Cut Pro X, SketchUp, Cinema4D, Hand-Drawn Illustration</p>
+      <p>Adobe Creative Cloud (Photoshop, Illustrator, InDesign, AfterEffects), Sketch, Figma, Final Cut Pro X, SketchUp, Cinema4D, Hand-Drawn Illustration</p>
       <br />
 
       {/* socials */}

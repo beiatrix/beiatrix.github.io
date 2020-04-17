@@ -25,7 +25,7 @@ export default () => {
             <Nav.Link href="/#projects">PROJECTS</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="https://drive.google.com/file/d/10ijzKyQnxud_F2EeqnBSFQO62XRkgQF-/view?usp=sharing" target="_blank">RESUME</Nav.Link>
+            <Nav.Link href="https://drive.google.com/file/d/1zG-Ex49QfjH6xXuEyqGmNjlLXYy4T_S5/view?usp=sharing" target="_blank">RESUME</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="https://www.beiatrix.com" target="_blank">ART+DES</Nav.Link>
