@@ -31,6 +31,9 @@ export default () => {
             <Nav.Link href="https://www.beiatrix.com" target="_blank">ART+DES</Nav.Link>
           </Nav.Item>
           <Nav.Item>
+            <Nav.Link href="https://www.beiatrix.blog" target="_blank">BLOG</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
             <Nav.Link href="/#contact">CONTACT</Nav.Link>
           </Nav.Item>
 
